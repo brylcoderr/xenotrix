@@ -107,7 +107,7 @@ const Testimonials = () => {
         >
           <div className="overflow-hidden">
             <motion.div 
-              animate={{ x: `-${currentIndex * (100 / (typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : (window.innerWidth < 1024 ? 2 : 3)))}%` }}
+              animate={{ x: `-${currentIndex * (100 / (typeof window !== 'undefined' ? (window.innerWidth < 768 ? 1 : (window.innerWidth < 1024 ? 2 : 3)) : 3))}%` }}
               transition={{ type: "spring", stiffness: 60, damping: 20 }}
               className="flex -mx-2 md:-mx-3"
             >
