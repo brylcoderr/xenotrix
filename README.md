@@ -1,344 +1,130 @@
-# XenotriX - Web, Mobile & AI Development Excellence
-
-![XenotriX Banner](https://img.shields.io/badge/XenotriX-Innovating_the_Future-00ff88?style=for-the-badge&logo=react)
-
-A production-ready, single-page agency website built with cutting-edge technologies and a unique coding/developer aesthetic. This project showcases modern web development practices with stunning visual effects, smooth animations, and comprehensive SEO implementation.
-
-## 🚀 Live Demo
-
-Visit the live site: [xenotrix.com](https://xenotrix.com)
-
-## ✨ Features
-
-### 🎨 Visual Design
-
-- **Matrix Rain Effect** - Animated falling code background in hero section
-- **Coding Aesthetic** - Terminal-style elements, code brackets, and syntax highlighting throughout
-- **Glass Morphism** - Modern glassmorphic cards and components
-- **Animated Grid Background** - Dynamic grid patterns with perspective
-- **Particle Effects** - Floating particles and connection lines
-- **Custom Cursor** - Crosshair cursor with glow effect
-- **Glitch Effects** - Hover animations with glitch distortion
-
-### 🎭 Animations
-
-- **Framer Motion** - Smooth page transitions and component animations
-- **Typing Animation** - Realistic typing effect in hero section
-- **Counter Animations** - Scroll-triggered number counting
-- **Hover Effects** - 3D tilt, scale, and rotation on cards
-- **Scroll Animations** - Elements fade and slide in on scroll
-- **Floating Elements** - Continuous floating animation for icons
-
-### 📱 Sections
-
-1. **Navigation** - Sticky header with scroll progress bar and mobile menu
-2. **Hero** - Matrix background, typing animation, and floating code snippets
-3. **Partner Logos** - Infinite horizontal scroll animation
-4. **About** - Company overview with animated stats counter
-5. **Why XenotriX** - Statistics with particle background
-6. **Services** - 8 service cards with hover code previews
-7. **Projects** - Tabbed showcase (Web Apps, Mobile Apps, AI Solutions)
-8. **Comparison** - Old Way vs XenotriX Way side-by-side
-9. **CTA** - Animated stars background with pulsing button
-10. **Footer** - Comprehensive links with scroll-to-top button
-
-### 🔍 SEO Implementation
-
-- ✅ Complete meta tags (Open Graph, Twitter Cards)
-- ✅ JSON-LD structured data for rich snippets
-- ✅ Semantic HTML5 markup
-- ✅ Sitemap.xml with all pages
-- ✅ Robots.txt with crawl rules
-- ✅ Optimized heading hierarchy
-- ✅ Alt text for all images
-- ✅ Canonical URLs
-- ✅ Mobile-friendly viewport
-
-### ♿ Accessibility
-
-- ✅ ARIA labels on interactive elements
-- ✅ Keyboard navigation support
-- ✅ Focus visible states
-- ✅ Screen reader friendly
-- ✅ Color contrast ratio 4.5:1+
-- ✅ Skip to content link
-
-### ⚡ Performance
-
-- ✅ Lazy loading for images
-- ✅ Code splitting
-- ✅ Optimized animations (60fps)
-- ✅ Debounced scroll listeners
-- ✅ Memoized components
-- ✅ WebP image format support
-
-## 🛠️ Tech Stack
-
-### Core Technologies
-
-- **React 19** - Latest React with concurrent features
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS 4** - Utility-first CSS framework
-
-### Libraries & Tools
-
-- **framer-motion** - Animation library
-- **lucide-react** - Icon library
-- **react-intersection-observer** - Scroll animations
-- **react-type-animation** - Typing effects
-
-### Development Tools
-
-- **ESLint** - Code linting
-- **Turbopack** - Fast bundler
-- **PostCSS** - CSS processing
-
-## 📦 Installation
-
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Steps
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yourusername/xenotrix.git
-   cd xenotrix
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Run development server**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Open browser**
-   ```
-   Navigate to http://localhost:3000
-   ```
-
-## 🏗️ Build for Production
-
-### Build the application
-
-```bash
-npm run build
-```
-
-### Preview production build
-
-```bash
-npm run preview
-```
-
-### Start production server
-
-```bash
-npm start
-```
-
-## 📁 Project Structure
-
-```
-xenotrix/
-├── app/
-│   ├── layout.tsx          # Root layout with SEO metadata
-│   ├── page.tsx            # Main page component
-│   └── globals.css         # Global styles with coding aesthetic
-├── components/
-│   ├── Navigation.tsx      # Sticky navigation with scroll progress
-│   ├── Hero.tsx            # Hero section with Matrix rain
-│   ├── PartnerLogos.tsx    # Infinite scroll partner logos
-│   ├── About.tsx           # About section with stats
-│   ├── WhyXenotrix.tsx     # Statistics with counters
-│   ├── Services.tsx        # Services grid with hover effects
-│   ├── Projects.tsx        # Tabbed project showcase
-│   ├── Comparison.tsx      # Old vs New comparison
-│   ├── CTA.tsx             # Call-to-action with stars
-│   └── Footer.tsx          # Footer with links
-├── public/
-│   ├── robots.txt          # SEO robots file
-│   ├── sitemap.xml         # SEO sitemap
-│   └── favicon.ico         # Site favicon
-├── tailwind.config.ts      # Tailwind configuration
-├── next.config.js          # Next.js configuration
-├── package.json            # Dependencies
-└── README.md               # This file
-```
-
-## 🎨 Customization Guide
-
-### Colors
-
-Edit `tailwind.config.ts` and `app/globals.css`:
-
-```css
-:root {
-  --color-primary: #00ff88; /* Matrix green */
-  --color-secondary: #00d9ff; /* Cyan */
-  --color-accent: #bd00ff; /* Purple */
-  --color-bg-deep: #0a0a0a; /* Deep black */
-  --color-bg-surface: #1a1a1a; /* Card background */
-}
-```
-
-### Fonts
-
-Fonts are loaded from Google Fonts in `app/globals.css`:
-
-- **Headings**: JetBrains Mono
-- **Body**: Inter
-
-To change fonts, update the `@import` statement and font-family values.
-
-### Content
-
-All content is in the component files. Update text directly in:
-
-- `components/Hero.tsx` - Hero headline and subheadline
-- `components/About.tsx` - Company description
-- `components/Services.tsx` - Service descriptions
-- `components/Projects.tsx` - Project details
-- `components/Footer.tsx` - Footer links and description
-
-### Animations
-
-Adjust animation speeds in `tailwind.config.ts`:
-
-```typescript
-animation: {
-  'fadeIn': 'fadeIn 0.6s ease-out',  // Change duration
-  'float': 'float 3s ease-in-out infinite',
-}
-```
-
-## 🌐 Deployment
-
-### Vercel (Recommended)
-
-1. Push code to GitHub
-2. Import project in Vercel
-3. Deploy automatically
-
-### Netlify
-
-1. Build command: `npm run build`
-2. Publish directory: `.next`
-3. Deploy
-
-### Custom Server
-
-1. Build: `npm run build`
-2. Start: `npm start`
-3. Serve on port 3000
-
-## 🔧 Environment Variables
-
-Create `.env.local` file (if needed):
-
-```env
-NEXT_PUBLIC_SITE_URL=https://xenotrix.com
-NEXT_PUBLIC_CONTACT_EMAIL=contact@xenotrix.com
-```
-
-## 📊 Performance Metrics
-
-Target Lighthouse scores:
-
-- **Performance**: 90+
-- **Accessibility**: 95+
-- **Best Practices**: 95+
-- **SEO**: 100
-
-### Optimization Tips
-
-1. Use WebP images (<200KB each)
-2. Enable lazy loading
-3. Minimize JavaScript bundles
-4. Use CDN for static assets
-5. Enable Gzip compression
-
-## 🌍 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🐛 Troubleshooting
-
-### Build Errors
-
-```bash
-# Clear cache and reinstall
-rm -rf .next node_modules
-npm install
-npm run build
-```
-
-### Animation Performance
-
-- Reduce particle count in Hero and CTA components
-- Disable Matrix rain on mobile devices
-- Use `will-change` CSS property sparingly
-
-### Styling Issues
-
-```bash
-# Rebuild Tailwind CSS
-npm run dev
-```
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📧 Contact
-
-**XenotriX**
-
-- Website: [xenotrix.com](https://xenotrix.com)
-- Email: contact@xenotrix.com
-- Phone: +91-95576 60208
-- LinkedIn: [linkedin.com/company/xenotrix](https://linkedin.com/company/xenotrix)
-
-## 🙏 Acknowledgments
-
-- **React Team** - For React 19
-- **Vercel** - For Next.js framework
-- **Tailwind Labs** - For Tailwind CSS
-- **Framer** - For Framer Motion
+# <div align="center">XenotriX Engineering</div>
+
+<div align="center">
+  <h3>Specialized Engineering for High-Growth Digital Infrastructure</h3>
+  <p>We architect and deploy technical solutions that solve complex business logic with sub-second precision.</p>
+</div>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-Active_Production-00ff88?style=for-the-badge&logo=statuspage" alt="Status" />
+  <img src="https://img.shields.io/badge/Focus-Web_Mobile_AI-00d9ff?style=for-the-badge" alt="Focus" />
+  <img src="https://img.shields.io/badge/Performance-99%2B-bd00ff?style=for-the-badge" alt="Performance" />
+</div>
 
 ---
 
+## ⚡ Mission Control
+
+XenotriX is a performance-first engineering agency. Unlike generic development shops, we treat web and mobile applications as mission-critical infrastructure. Our core objective is to eliminate technical bottlenecks and replace them with high-speed, scalable, and secure digital assets.
+
+### 📊 Impact by Numbers
+
+- **+85%** Average increase in operational efficiency
+- **-45%** Average reduction in bounce rates
+- **<30ms** Target latency for financial architectures
+- **0.6s** Average LCP for landing environments
+
+---
+
+## 🛠️ Specialized Capabilities
+
+We don't just "build websites." We engineer ecosystems across three core pillars:
+
+### 🏛️ 1. Infrastructure (Modern Web & Mobile)
+
+- **Elite Web Apps**: High-performance Next.js portals with sub-second delivery.
+- **Mobile Units**: Cross-platform iOS/Android development using React Native.
+- **Cloud Strategy**: Multi-region AWS/Vercel architectures for global scale.
+
+### 🧠 2. Intelligence (AI & Data)
+
+- **AI Strategy**: LLM integration, Vector databases, and automated workflows.
+- **Automation**: Bespoke back-office logic and event-driven microservices.
+- **Security**: Hardened infrastructure with zero-knowledge encryption protocols.
+
+### 📈 3. Optimization (Growth)
+
+- **Technical SEO/GEO**: Search engine domination through performance-first engineering.
+- **Managed Ops**: 24/7 mission-critical monitoring and system hardening.
+- **Custom Ops**: Unique engineering solutions for non-standard business logic.
+
+---
+
+## 🧪 The XenotriX Pipeline (V4)
+
+Our systematic approach ensures every deployment is optimized for stability and performance.
+
+1.  **Discovery (AUDIT_V4)**: Deep-dive technical audits to define the engineering roadmap.
+2.  **Strategy (BLUEPRINT_X)**: Crafting architectural blueprints and technical specs.
+3.  **Design (UX_FLOW_PRO)**: Visualizing solutions with elite UX and high-performance UI.
+4.  **Development (GIT_OPS_PRIMARY)**: Building core engines with clean, modular patterns.
+5.  **QA & Hardening (STRESS_TEST_V2)**: Rigorous security audits and performance testing.
+6.  **Launch (GLOBAL_SHIP)**: Zero-downtime global deployment to production.
+7.  **LTS Support (LTS_STABLE)**: Continuous optimization and proactive maintenance.
+
+---
+
+## 📂 Featured Case Studies
+
+### 🦷 OmniHealth Dental
+
+_Global Dental Clinic Ecosystem_
+
+- **Problem**: Legacy scheduling protocols caused high patient churn.
+- **Solution**: High-speed Next.js frontend with automated re-engagement algorithms.
+- **Impact**: +85% Efficiency, -40% No-Shows.
+
+### 📈 FinScale Platform
+
+_Capital One Partner Infrastructure_
+
+- **Problem**: Monolithic legacy system causing critical compliance failures.
+- **Solution**: Event-driven microservices using Kafka, Redis, and Next.js.
+- **Impact**: <30ms Latency, 250k events/sec throughput.
+
+### 🤖 AutoQuery Engine
+
+_Enterprise SaaS AI Integration_
+
+- **Problem**: Support teams overwhelmed by technical tickets.
+- **Solution**: RAG pipeline with Pinecone and GPT-4 for automated responses.
+- **Impact**: 72% Ticket Resolution, <5s Response Time.
+
+---
+
+## 🏗️ Technology Stack
+
+| Layer              | Technologies                                     |
+| :----------------- | :----------------------------------------------- |
+| **Frontend**       | React 19, Next.js 15, TypeScript, Tailwind CSS 4 |
+| **Mobile**         | React Native, Expo, WebRTC                       |
+| **Backend**        | Node.js, Go, Python, FastAPI                     |
+| **Data/Cache**     | PostgreSQL, Redis Graph, Pinecone, Supabase      |
+| **Infrastructure** | AWS, Vercel, Kafka, Docker                       |
+
+---
+
+## ⚖️ Why XenotriX?
+
+| Feature           | Legacy Agencies      | The XenotriX Way                          |
+| :---------------- | :------------------- | :---------------------------------------- |
+| **Performance**   | Basic optimization   | Sub-second LCP & hardware acceleration    |
+| **Architecture**  | Monolithic / Bloated | Event-driven microservices                |
+| **UX/UI**         | Generic templates    | High-fidelity, custom-engineered UI       |
+| **SEO**           | Meta tags only       | Technical GEO-optimization & Vitals focus |
+| **Communication** | Jira/Email lag       | Direct Slack integration & Daily Syncs    |
+
+---
+
+## 📞 Initiate Contact
+
+Ready to move from legacy constraints to engineering excellence?
+
+- **Website**: [xenotrix.com](https://xenotrix.com)
+- **Email**: contact@xenotrix.com
+- **Phone**: +91-95576 60208
+- **Address**: Agra, India
+
 <div align="center">
-
-**Built with ❤️ and `<code />` by XenotriX**
-
-![Made with React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
-![Made with Next.js](https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=next.js)
-![Made with TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
-![Made with Tailwind](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css)
-
+  <sub>Built with ❤️ and <code>&lt;code /&gt;</code> by the XenotriX Engineering Team.</sub>
 </div>
