@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, Terminal } from 'lucide-react';
+import { ArrowRight, MessageSquare, Terminal, Clock } from 'lucide-react';
+import Link from 'next/link';
 import NextImage from 'next/image';
 
 const CTA = () => {
@@ -39,10 +40,15 @@ const CTA = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 w-full max-w-md justify-center">
-                 <button className="btn-tech group w-full sm:w-auto">
-                    Initialize Consultation
-                    <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
-                 </button>
+                  <Link 
+                    href="https://cal.com/brylcodes/15min" 
+                    target="_blank"
+                    className="btn-primary group w-full sm:w-auto justify-center"
+                  >
+                     <Clock size={16} className="text-bg-dark" />
+                     Initialize Call
+                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
                  <button className="btn-tech-outline flex items-center justify-center gap-2 w-full sm:w-auto">
                     <MessageSquare size={18} />
                     Chat with Team

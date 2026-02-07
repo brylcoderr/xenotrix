@@ -1,8 +1,6 @@
- 'use client';
+'use client';
 
 import { useParams } from 'next/navigation';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -90,7 +88,7 @@ const caseData = {
       { category: "DB", tech: "PostgreSQL with Prisma ORM" }
     ],
     image: "/images/Healthcare_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://demos.xenotrix.com/healthcare"
+    demoUrl: ""
   },
   "ecommerce-platform": {
     title: "VentureStore Elite",
@@ -111,7 +109,7 @@ const caseData = {
       { category: "Deployment", tech: "Vercel Edge Functions" }
     ],
     image: "/images/ecommerce_hero.png",
-    demoUrl: "https://demos.xenotrix.com/ecommerce"
+    demoUrl: ""
   },
   "fitness-platform": {
     title: "PulseFlow Fitness",
@@ -132,7 +130,7 @@ const caseData = {
       { category: "Payment", tech: "Stripe Connect Integration" }
     ],
     image: "/images/Fitness_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://demos.xenotrix.com/fitness"
+    demoUrl: ""
   },
   "realestate-portal": {
     title: "Horizon Realty Hub",
@@ -153,7 +151,7 @@ const caseData = {
       { category: "API", tech: "Python/FastAPI Service layer" }
     ],
     image: "/images/Real estate_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://demos.xenotrix.com/real-estate"
+    demoUrl: ""
   },
   "saas-dashboard": {
     title: "Saas Dashboard",
@@ -173,7 +171,7 @@ const caseData = {
       { category: "Deployment", tech: "Vercel" }
     ],
     image: "/images/Dashboards (1).png",
-    demoUrl: "https://brylcodes-saas-dashboard.vercel.app/"
+    demoUrl: ""
   },
   "saas-landing": {
     title: "Saas Landing",
@@ -193,7 +191,7 @@ const caseData = {
       { category: "Design", tech: "Tailwind CSS" }
     ],
     image: "/images/Skipper_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://skiper-landing.vercel.app/"
+    demoUrl: ""
   },
   "ai-landing-page": {
     title: "AI Landing Page",
@@ -213,7 +211,7 @@ const caseData = {
       { category: "Analytics", tech: "Posthog, Mixpanel" }
     ],
     image: "/images/Pointer_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://pointer-landing-template.vercel.app/"
+    demoUrl: ""
   },
   "photography-banner": {
     title: "Photography Banner",
@@ -233,7 +231,7 @@ const caseData = {
       { category: "Hosting", tech: "Vercel" }
     ],
     image: "/images/PhotoGraphy_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://photography-banner.vercel.app/"
+    demoUrl: ""
   },
   "katachi-studio": {
     title: "Katachi Studio",
@@ -253,7 +251,7 @@ const caseData = {
       { category: "Performance", tech: "Edge Cached" }
     ],
     image: "/images/Katachi_r1_c1_processed_by_imagy.png",
-    demoUrl: "https://katachi-studio-bice.vercel.app/"
+    demoUrl: ""
   }
 };
 
@@ -266,7 +264,7 @@ export default function CaseStudyPage() {
 
   return (
     <main className="min-h-screen bg-bg-dark text-white selection:bg-brand-primary/30">
-      <Navigation />
+      
       
       <div className="pt-32 pb-24">
         <div className="section-container">
@@ -283,16 +281,6 @@ export default function CaseStudyPage() {
             <p className="text-2xl text-text-dim leading-relaxed font-medium mb-12">
               {data.description}
             </p>
-            {data.demoUrl && (
-              <a 
-                href={data.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-primary text-white font-bold tracking-widest uppercase text-xs hover:bg-brand-primary/80 transition-all shadow-2xl shadow-brand-primary/20"
-              >
-                Launch Demo <ExternalLink size={16} />
-              </a>
-            )}
           </header>
 
           {/* Hero Image */}
@@ -362,7 +350,6 @@ export default function CaseStudyPage() {
         </div>
       </div>
 
-      <Footer />
     </main>
   );
 }

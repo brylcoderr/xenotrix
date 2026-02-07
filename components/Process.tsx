@@ -1,184 +1,205 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, PenTool, Code2, Rocket, ChevronLeft, ChevronRight } from 'lucide-react';
-import NextImage from 'next/image';
+import { Search, PenTool, Rocket, ChevronRight, Cpu, ShieldCheck, Zap } from 'lucide-react';
+import { useState } from 'react';
 
 const Process = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
     {
-      icon: <Search className="w-6 h-6" />,
-      title: "Discovery",
-      desc: "Deep-dive technical audits to define the engineering roadmap and project core.",
-      label: "01",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
-      protocol: "AUDIT_V4"
+      id: "01",
+      icon: <Search size={22} />,
+      title: "Strategic Discovery",
+      shortDesc: "Deep-dive audit & blueprinting.",
+      fullDesc: "Our architects perform a deep-dive audit of your business ecosystem to blueprint a path for scalable dominance. We analyze every technical friction point to ensure clinical execution.",
+      features: ["Business Logic Audit", "Market Positioning", "Technical Feasibility"],
+      color: "from-emerald-500/20 to-teal-600/20"
     },
     {
-      icon: <PenTool className="w-6 h-6" />,
-      title: "Strategy",
-      desc: "Crafting technical specifications and the architectural blueprint.",
-      label: "02",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop",
-      protocol: "BLUEPRINT_X"
+      id: "02",
+      icon: <PenTool size={22} />,
+      title: "Precision Engineering",
+      shortDesc: "High-fidelity development.",
+      fullDesc: "Design meeting performance. We construct high-fidelity frameworks optimized for speed, security, and elite user experience using next-generation stack protocols.",
+      features: ["Architecture Design", "Security Hardening", "UI/UX Orchestration"],
+      color: "from-teal-500/20 to-emerald-700/20"
     },
     {
-      icon: <Code2 className="w-6 h-6" />,
-      title: "Design",
-      desc: "Visualizing the solution with a focus on elite UX and high-performance UI.",
-      label: "03",
-      image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop",
-      protocol: "UX_FLOW_PRO"
-    },
-    {
-      icon: <Code2 className="w-6 h-6" />,
-      title: "Development",
-      desc: "Building the core engine and frontend with clean, modular patterns.",
-      label: "04",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-      protocol: "GIT_OPS_PRIMARY"
-    },
-    {
-      icon: <Search className="w-6 h-6" />,
-      title: "QA & Hardening",
-      desc: "Rigorous security audits and performance stress-testing.",
-      label: "05",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-      protocol: "STRESS_TEST_V2"
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: "Launch",
-      desc: "Zero-downtime global deployment to production environments.",
-      label: "06",
-      image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2070&auto=format&fit=crop",
-      protocol: "GLOBAL_SHIP"
-    },
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      title: "LTS Support",
-      desc: "Long-term technical support and continuous system optimization.",
-      label: "07",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop",
-      protocol: "LTS_STABLE"
+      id: "03",
+      icon: <Rocket size={22} />,
+      title: "Seamless Integration",
+      shortDesc: "Zero-friction deployment.",
+      fullDesc: "Zero-friction deployment. We integrate mission-critical solutions into your existing stack with clinical precision, ensuring uninterrupted business operations.",
+      features: ["CI/CD Pipeline Setup", "Zero-Downtime Migration", "Infrastructure Tuning"],
+      color: "from-emerald-400/20 to-teal-500/20"
     }
   ];
 
-  const next = () => {
-    if (currentIndex < steps.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const prev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
   return (
-    <section id="process" className="py-24 md:py-32 relative overflow-hidden bg-bg-dark">
-      {/* Background Mesh */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-primary/2 blur-[120px] pointer-events-none" />
+    <section id="process" className="py-16 md:py-24 bg-bg-dark relative overflow-hidden">
+      {/* Cinematic Background Engine */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[120px] -mr-96 -mt-96 opacity-30" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
 
       <div className="section-container relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
-          <div className="max-w-2xl">
-            <div className="tech-label">Our Pipeline</div>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 md:mb-8">
-              Systematic <span className="text-brand-primary">Shipment</span>.
+        <div className="flex flex-col items-center text-center mb-16 lg:hidden">
+          <span className="tag">Our Methodology</span>
+          <h2 className="text-4xl font-bold tracking-tighter mb-4 leading-[0.85] text-white">
+            Architectural <span className="text-brand-primary">Excellence.</span>
+          </h2>
+          <p className="text-base text-text-dim leading-snug opacity-80 max-w-sm">
+            A high-performance workflow for mission-critical digital scaling.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-12 gap-20 items-start">
+          
+          {/* Static Header Column - Desktop Only */}
+          <div className="hidden lg:col-span-5 lg:block sticky top-32">
+            <span className="tag">Our Methodology</span>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
+              The Lifecycle of <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Architectural Excellence.</span>
             </h2>
-            <p className="text-text-dim text-lg md:text-xl leading-relaxed">
-              Our systematic approach ensures every deployment is optimized for stability, performance, and long-term business scale.
+            <p className="text-lg text-text-dim leading-tight mb-10 font-medium opacity-80 max-w-md">
+              A condensed, high-performance workflow designed for mission-critical digital scaling.
             </p>
+
+            {/* Step Selection - Interactive Navigation */}
+            <div className="space-y-3">
+              {steps.map((step, i) => (
+                <button
+                  key={step.id}
+                  onClick={() => setActiveStep(i)}
+                  className={`w-full flex items-center gap-5 p-5 rounded-4xl transition-all duration-500 border group ${
+                    activeStep === i 
+                    ? 'bg-white/5 border-white/10 shadow-2xl shadow-brand-primary/10' 
+                    : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
+                  }`}
+                >
+                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-500 ${
+                    activeStep === i 
+                    ? `bg-linear-to-r ${step.color.replace('/20', '')} text-bg-dark scale-110 shadow-lg` 
+                    : 'bg-white/5 text-white/40'
+                  }`}>
+                    {step.icon}
+                  </div>
+                  <div className="text-left">
+                    <div className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-0.5">Phase {step.id}</div>
+                    <div className="text-base font-bold text-white tracking-tight">{step.title}</div>
+                  </div>
+                  <ChevronRight 
+                    size={16} 
+                    className={`ml-auto transition-transform duration-500 ${activeStep === i ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} 
+                  />
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="flex gap-4">
-            <button 
-              onClick={prev}
-              disabled={currentIndex === 0}
-              className={`w-14 h-14 rounded-2xl border flex items-center justify-center transition-all duration-300 ${
-                currentIndex === 0 
-                ? 'border-white/5 text-white/10' 
-                : 'border-white/10 text-white hover:border-brand-primary hover:text-brand-primary cursor-pointer'
-              }`}
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button 
-              onClick={next}
-              disabled={currentIndex === steps.length - 1}
-              className={`w-14 h-14 rounded-2xl border flex items-center justify-center transition-all duration-300 ${
-                currentIndex === steps.length - 1 
-                ? 'border-white/5 text-white/10' 
-                : 'border-white/10 text-white hover:border-brand-primary hover:text-brand-primary cursor-pointer'
-              }`}
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-        </div>
+          {/* Dynamic Content Display - Mobile Carousel Integrated */}
+          <div className="lg:col-span-7 w-full">
+            {/* Mobile Phase Indicators */}
+            <div className="flex lg:hidden justify-between gap-2 mb-8 bg-white/2 p-2 rounded-3xl border border-white/5">
+              {steps.map((step, i) => (
+                <button
+                  key={step.id}
+                  onClick={() => setActiveStep(i)}
+                  className={`flex-1 flex flex-col items-center py-3 rounded-2xl transition-all duration-500 ${
+                    activeStep === i ? 'bg-white/5 text-brand-primary' : 'text-white/20'
+                  }`}
+                >
+                  <div className="mb-1">{step.icon}</div>
+                  <div className="text-[8px] font-black uppercase tracking-widest">{step.id}</div>
+                </button>
+              ))}
+            </div>
 
-        <div className="relative overflow-visible">
-          <motion.div 
-            animate={{ x: `-${currentIndex * (typeof window !== 'undefined' && window.innerWidth < 1024 ? 100 : 25)}%` }}
-            transition={{ type: "spring", stiffness: 300, damping: 35 }}
-            className="flex gap-4 md:gap-6"
-          >
-            {steps.map((step, index) => (
-              <div 
-                key={index}
-                className="min-w-[75%] md:min-w-[calc(25%-18px)] shrink-0 flex flex-col"
-              >
-                <div className="glass-panel p-1.5 h-full flex flex-col group hover:border-brand-primary/40 transition-all duration-700">
-                  <div className="relative h-40 w-full shrink-0 rounded-lg overflow-hidden mb-4 border border-white/5 bg-white/2">
-                    <NextImage 
-                      src={step.image}
-                      alt={step.title}
-                      fill
-                      className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
-                      sizes="(max-width: 768px) 75vw, (max-width: 1200px) 25vw, 300px"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-bg-dark via-transparent to-transparent opacity-60 pointer-events-none" />
-                    
-                    <div className="absolute top-3 right-3 font-mono text-[9px] bg-bg-dark/80 backdrop-blur-md px-2 py-1 rounded-md border border-white/5 text-brand-primary z-10">
-                       {step.protocol}
-                    </div>
+            <div className="relative min-h-[500px] p-8 lg:p-16 overflow-hidden group border border-white/5 rounded-5xl bg-white/3 backdrop-blur-3xl">
+              {/* Dynamic Animated Background */}
+              <motion.div 
+                key={`bg-${activeStep}`}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className={`absolute inset-0 bg-linear-to-br ${steps[activeStep].color} opacity-[0.08]`} 
+              />
+              
+              <div className="relative z-10 h-full flex flex-col">
+                <motion.div
+                  key={activeStep}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                     <span className="text-6xl md:text-[100px] font-black text-white/5 leading-none tracking-tighter select-none">
+                       {steps[activeStep].id}
+                     </span>
+                     <div className="flex-1 h-px bg-white/5" />
+                     <div className="px-5 py-2 rounded-full border border-brand-primary/20 bg-brand-primary/5 text-[10px] font-black text-brand-primary uppercase tracking-widest animate-pulse">
+                       System_Phase_Live
+                     </div>
                   </div>
 
-                  <div className="p-4 pt-0 flex flex-col grow">
-                    <div className="flex justify-between items-start mb-4">
-                      <div className="w-10 h-10 shrink-0 rounded-lg bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-500">
-                        {step.icon}
+                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-6">
+                    {steps[activeStep].title}
+                  </h3>
+
+                  <p className="text-base md:text-xl text-white leading-relaxed mb-10 font-medium italic opacity-90">
+                    &quot;{steps[activeStep].fullDesc}&quot;
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-10 mt-auto">
+                    <div>
+                      <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary mb-6 flex items-center gap-2">
+                        <Cpu size={12} /> Core Protocols
                       </div>
-                      <span className="font-mono text-[10px] font-bold text-white/20 tracking-widest">{step.label}</span>
+                      <div className="space-y-4">
+                        {steps[activeStep].features.map((feature, i) => (
+                          <div key={i} className="flex items-center gap-3 group/item">
+                            <div className="w-1 h-1 rounded-full bg-brand-primary group-hover/item:scale-150 transition-transform" />
+                            <span className="text-[10px] font-black text-white uppercase tracking-widest group-hover/item:text-brand-primary transition-colors duration-300">
+                              {feature}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                    <p className="text-text-dim text-sm leading-relaxed mb-6 h-12 line-clamp-2">
-                      {step.desc}
-                    </p>
-
-                    <div className="mt-auto flex items-center gap-2 text-[9px] font-mono font-bold tracking-widest text-brand-primary/60 group-hover:text-brand-primary transition-colors duration-500">
-                       <span className="w-6 h-px bg-brand-primary/30 group-hover:w-10 transition-all duration-500" />
-                       EXPLORE
+                    <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
+                       <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
+                          <ShieldCheck className="text-brand-primary mb-2 transition-transform group-hover/card:scale-110" size={18} />
+                          <div className="text-[8px] font-black text-white uppercase tracking-widest">Arch Audit</div>
+                       </div>
+                       <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
+                          <Zap className="text-teal-400 mb-2 transition-transform group-hover/card:scale-110" size={18} />
+                          <div className="text-[8px] font-black text-white uppercase tracking-widest">Efficiency</div>
+                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </div>
 
-        {/* Progress Bar */}
-        <div className="mt-16 w-full h-px bg-white/5 relative">
-           <motion.div 
-             animate={{ width: `${((currentIndex + 1) / steps.length) * 100}%` }}
-             className="absolute top-0 left-0 h-full bg-brand-primary shadow-[0_0_15px_rgba(79,70,229,0.5)]"
-           />
+            {/* Mobile Navigation Arrows */}
+            <div className="flex lg:hidden justify-between mt-8">
+               <button 
+                 onClick={() => setActiveStep(prev => (prev - 1 + steps.length) % steps.length)}
+                 className="flex items-center gap-2 text-[10px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
+               >
+                 <ChevronRight className="rotate-180" size={14} /> Prev Phase
+               </button>
+               <button 
+                 onClick={() => setActiveStep(prev => (prev + 1) % steps.length)}
+                 className="flex items-center gap-2 text-[10px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
+               >
+                 Next Phase <ChevronRight size={14} />
+               </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,194 +1,247 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Shield, Zap, Globe, ArrowLeft, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Check, ArrowRight, ShieldCheck, Zap, Target, Cpu, Activity, Lock } from 'lucide-react';
 import Link from 'next/link';
 
 const Packages = () => {
-  const [currentIndex, setCurrentIndex] = useState(1); // Default to the popular middle one
-
   const plans = [
     {
-      name: "MVP_LAUNCH",
-      price: "$4,900",
-      duration: "4 Weeks",
-      desc: "Ideal for startups needing a high-performance prototype to secure funding or validate market-fit.",
+      name: "Strategic Sprint",
+      tagline: "High-intensity validation",
+      price: "Initiation",
+      icon: <Target className="text-emerald-500" size={24} />,
       features: [
-        "Native Mobile or Web App",
-        "Cloud Infrastructure Setup",
-        "Core Feature Engineering",
-        "Basic SEO Optimization",
-        "2 Weeks Post-Launch Support"
+        "Rapid Strategic Prototyping",
+        "Technical Architecture Audit",
+        "Market Logic Verification",
+        "High-Fidelity Interface Design",
+        "Deployment Roadmap Blueprint"
       ],
-      icon: <Zap size={24} />,
-      popular: false
+      color: "from-emerald-500/10 to-teal-500/10"
     },
     {
-      name: "ENTERPRISE_SCALE",
-      price: "$12,500",
-      duration: "8-12 Weeks",
-      desc: "Comprehensive engineering for established businesses looking to migrate or scale their digital infrastructure.",
+      name: "Elite Squad Ops",
+      tagline: "Mission-critical product teams",
+      price: "Retainer",
+      popular: true,
+      icon: <Zap className="text-bg-dark" size={24} />,
       features: [
-        "Modular Architecture",
-        "Advanced AI Integration",
-        "Enterprise Security",
-        "Automated CI/CD",
-        "99.9% Uptime SLA",
-        "Dedicated Engineer"
+        "Dedicated Engineering Squad",
+        "Architectural Oversight Protocol",
+        "Enterprise-Grade Resilience",
+        "Security Hardening Active",
+        "Continuous Optimization Loops"
       ],
-      icon: <Globe size={24} />,
-      popular: true
+      color: "from-emerald-600/20 to-teal-700/20"
     },
     {
-      name: "AI_CUSTOM_OPS",
-      price: "CUSTOM",
-      duration: "Variable",
-      desc: "Specialized boutique solutions focusing on LLM architecture, robotic process automation, and vector intelligence.",
+      name: "Core Transformation",
+      tagline: "Legacy modernizations & AI scaling",
+      price: "Enterprise",
+      icon: <ShieldCheck className="text-emerald-500" size={24} />,
       features: [
-        "LLM Fine-tuning",
-        "Vector DB Integration",
-        "Workflow Automation",
-        "Data Intelligence",
-        "Private Node Deploy",
-        "On-Premise Capability"
+        "Core Ecosystem Modernization",
+        "Neural Pipeline Orchestration",
+        "SOC2 / Compliance Hardening",
+        "24/7 Production Stability",
+        "Global Scale Management"
       ],
-      icon: <Shield size={24} />,
-      popular: false
+      color: "from-emerald-600/10 to-teal-600/10"
     }
   ];
 
-  const nextPlan = () => {
-    setCurrentIndex((prev) => (prev + 1) % plans.length);
-  };
-
-  const prevPlan = () => {
-    setCurrentIndex((prev) => (prev - 1 + plans.length) % plans.length);
-  };
-
   return (
-    <section id="packages" className="py-24 md:py-32 relative bg-white/2 overflow-hidden">
-      <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <div className="tech-label mx-auto justify-center">Deployment Tiers</div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 md:mb-8">Engineering <span className="text-brand-primary">Packages</span>.</h2>
-          <p className="text-text-dim text-base md:text-lg">Transparent pricing for elite engineering. Choose the plan that fits your mission parameters.</p>
+    <section id="packages" className="py-16 md:py-24 bg-bg-dark relative overflow-hidden">
+      {/* Decorative Structural Engine */}
+      <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-primary/5 rounded-full blur-[150px] -mr-96 -mt-96 opacity-30" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
+      <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
+
+      <div className="section-container relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-24">
+          <span className="tag justify-center!">Engagement Structures</span>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
+            Engineered <br />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Engagement Models.</span>
+          </h2>
+          <p className="text-lg md:text-xl text-text-dim leading-tight font-medium opacity-80 max-w-2xl mx-auto">
+             Select the operational protocol that aligns with your organization&apos;s architectural scale and mission-critical objectives.
+          </p>
         </div>
 
-        {/* Mobile Carousel View */}
-        <div className="lg:hidden relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.4 }}
-              className={`glass-panel p-8 flex flex-col relative overflow-visible ${plans[currentIndex].popular ? 'border-brand-primary/40 shadow-[0_0_40px_rgba(79,70,229,0.1)]' : ''}`}
-            >
-              {plans[currentIndex].popular && (
-                <div className="absolute top-0 right-10 -translate-y-1/2 bg-brand-primary text-white text-[10px] font-bold font-mono px-4 py-1.5 rounded-full tracking-[0.2em] shadow-lg">
-                  MOST_DEPLOYED
+        <div className="relative">
+          {/* Mobile View: Swipeable Carousel */}
+          <div className="md:hidden">
+            <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-6 pb-8 px-4 -mx-4">
+              {plans.map((plan, i) => (
+                <div key={i} className="min-w-[85vw] snap-center">
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className={`premium-card p-8 flex flex-col relative group transition-all duration-700 min-h-[640px] border-white/5 hover:border-brand-primary/30 h-full ${
+                      plan.popular ? 'shadow-2xl shadow-brand-primary/10 bg-white/3' : 'bg-white/2'
+                    }`}
+                  >
+                    {/* Internal Dynamic Aura */}
+                    <div className={`absolute inset-0 bg-linear-to-br ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
+                    
+                    {plan.popular && (
+                      <div className="absolute top-4 right-4 py-1.5 px-4 rounded-full bg-linear-to-r from-brand-primary to-emerald-600 text-[8px] font-black uppercase tracking-[0.3em] text-bg-dark shadow-2xl flex items-center gap-2">
+                        <Activity size={8} className="animate-pulse" />
+                        Primary Protocol
+                      </div>
+                    )}
+                    
+                    <div className="relative z-10 mb-8">
+                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-2xl transition-all duration-700 ${
+                        plan.popular 
+                          ? 'bg-brand-primary text-bg-dark' 
+                          : 'bg-white/5 border border-white/10 text-white'
+                      }`}>
+                        {plan.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2 tracking-tighter text-white">{plan.name}</h3>
+                      <div className="flex items-center gap-2 opacity-60">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
+                        <p className="text-[8px] text-text-dim font-black uppercase tracking-[0.2em]">{plan.tagline}</p>
+                      </div>
+                    </div>
+
+                    <div className="relative z-10 mb-8 pt-6 border-t border-white/5">
+                      <div className="flex items-baseline gap-2 mb-2">
+                        <div className="text-4xl font-black tracking-tighter text-white uppercase">{plan.price}</div>
+                      </div>
+                      <div className="flex items-center gap-2 text-[8px] uppercase tracking-[0.2em] text-brand-primary font-black opacity-60">
+                        <Cpu size={10} />
+                        Evaluation Basis : 0.01
+                      </div>
+                    </div>
+
+                    <div className="relative z-10 space-y-4 mb-8 flex-1">
+                      {plan.features.map((feature, j) => (
+                        <div key={j} className="flex items-start gap-3">
+                          <div className="mt-1 w-4 h-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/20">
+                            <Check size={8} />
+                          </div>
+                          <span className="text-xs text-text-dim font-medium leading-relaxed">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="relative z-10 mt-auto">
+                      <Link 
+                        href="#contact" 
+                        className={`w-full py-4 rounded-xl font-black text-[8px] tracking-[0.3em] uppercase transition-all flex items-center justify-center gap-2 ${
+                          plan.popular 
+                            ? 'bg-white text-bg-dark' 
+                            : 'bg-white/5 text-white border border-white/10'
+                        }`}
+                      >
+                        <Lock size={10} className="opacity-40" />
+                        Initiate Bridge
+                        <ArrowRight size={14} />
+                      </Link>
+                    </div>
+                  </motion.div>
                 </div>
-              )}
+              ))}
+            </div>
+            
+            {/* Scroll Indicator Dots */}
+            <div className="flex justify-center gap-2 mt-4">
+              {plans.map((_, i) => (
+                <div key={i} className="w-1.5 h-1.5 rounded-full bg-white/10" />
+              ))}
+            </div>
+          </div>
 
-              <div className="flex justify-between items-start mb-8">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${plans[currentIndex].popular ? 'bg-brand-primary text-white border-brand-primary' : 'bg-white/5 text-brand-primary border-white/10'}`}>
-                  {plans[currentIndex].icon}
-                </div>
-                <div className="text-right">
-                  <p className="text-[9px] font-mono text-text-dim mb-1 uppercase tracking-widest">{plans[currentIndex].duration}</p>
-                  <p className="text-xl font-black tracking-tighter">{plans[currentIndex].price}</p>
-                </div>
-              </div>
-
-              <h3 className="text-lg font-bold mb-3 font-mono tracking-tight">{plans[currentIndex].name}</h3>
-              <p className="text-xs text-text-dim leading-relaxed mb-8 min-h-16">
-                {plans[currentIndex].desc}
-              </p>
-
-              <div className="grid grid-cols-2 gap-x-4 gap-y-3 mb-10 flex-1">
-                {plans[currentIndex].features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start gap-2">
-                    <Check size={14} className="text-brand-primary mt-0.5 shrink-0" />
-                    <span className="text-[10px] font-medium text-white/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link 
-                href="/#contact"
-                className={`w-full py-4 rounded-xl font-bold font-mono text-[10px] text-center transition-all duration-500 ${plans[currentIndex].popular ? 'bg-white text-bg-dark hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]' : 'bg-white/5 border border-white/10 hover:border-white/30'}`}
+          {/* Desktop View: Grid */}
+          <div className="hidden md:grid grid-cols-3 gap-8 relative">
+            {plans.map((plan, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                viewport={{ once: true }}
+                className={`premium-card p-10 flex flex-col relative group transition-all duration-700 min-h-[700px] border-white/5 hover:border-brand-primary/30 ${
+                  plan.popular ? 'shadow-2xl shadow-brand-primary/10 scale-105 z-20' : 'bg-white/2 hover:bg-white/3'
+                }`}
               >
-                INITIALIZE_PROJECT
-              </Link>
-            </motion.div>
-          </AnimatePresence>
+                {/* Internal Dynamic Aura */}
+                <div className={`absolute inset-0 bg-linear-to-br ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
+                
+                {plan.popular && (
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 py-2 px-6 rounded-full bg-linear-to-r from-brand-primary to-emerald-600 text-[10px] font-black uppercase tracking-[0.4em] text-bg-dark shadow-2xl flex items-center gap-3">
+                    <Activity size={10} className="animate-pulse" />
+                    Primary Protocol
+                  </div>
+                )}
+                
+                <div className="relative z-10 mb-10">
+                  <div className={`w-16 h-16 rounded-4xl flex items-center justify-center mb-10 shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 ${
+                    plan.popular 
+                      ? 'bg-brand-primary text-bg-dark' 
+                      : 'bg-white/5 border border-white/10 text-white'
+                  }`}>
+                    {plan.icon}
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3 tracking-tighter text-white group-hover:text-brand-primary transition-colors">{plan.name}</h3>
+                  <div className="flex items-center gap-2 opacity-60">
+                    <div className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
+                    <p className="text-[10px] text-text-dim font-black uppercase tracking-[0.2em]">{plan.tagline}</p>
+                  </div>
+                </div>
 
-          <div className="flex justify-between items-center mt-8 px-4">
-             <button onClick={prevPlan} className="p-3 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-brand-primary">
-                <ArrowLeft size={20} />
-             </button>
-             <div className="flex gap-2">
-                {plans.map((_, i) => (
-                  <div key={i} className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-8 bg-brand-primary' : 'w-2 bg-white/10'}`} />
-                ))}
-             </div>
-             <button onClick={nextPlan} className="p-3 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-brand-primary">
-                <ArrowRight size={20} />
-             </button>
+                <div className="relative z-10 mb-12 pt-10 border-t border-white/5">
+                  <div className="flex items-baseline gap-2 mb-3">
+                    <div className="text-5xl font-black tracking-tighter text-white group-hover:text-brand-primary transition-colors uppercase">{plan.price}</div>
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-brand-primary font-black opacity-60 group-hover:opacity-100 transition-opacity">
+                    <Cpu size={10} />
+                    Evaluation Basis : 0.01
+                  </div>
+                </div>
+
+                <div className="relative z-10 space-y-6 mb-12 flex-1">
+                  {plan.features.map((feature, j) => (
+                    <div key={j} className="flex items-start gap-4 group/item cursor-default">
+                      <div className="mt-0.5 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/20 group-hover/item:bg-brand-primary group-hover/item:text-bg-dark group-hover/item:border-brand-primary transition-all duration-500">
+                        <Check size={10} />
+                      </div>
+                      <span className="text-sm text-text-dim font-medium group-hover/item:text-white transition-colors leading-relaxed">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="relative z-10">
+                  <Link 
+                    href="#contact" 
+                    className={`w-full py-5 rounded-2xl font-black text-[10px] tracking-[0.3em] uppercase transition-all flex items-center justify-center gap-3 group/btn ${
+                      plan.popular 
+                        ? 'bg-white text-bg-dark hover:bg-brand-primary hover:text-bg-dark' 
+                        : 'bg-white/5 text-white hover:bg-white hover:text-bg-dark border border-white/10'
+                    }`}
+                  >
+                    <Lock size={12} className="opacity-40" />
+                    Initiate Bridge
+                    <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
-        {/* Desktop Grid View */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-8 md:gap-12">
-          {plans.map((plan, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className={`glass-panel p-10 flex flex-col relative overflow-visible ${plan.popular ? 'border-brand-primary/40 shadow-[0_0_40px_rgba(79,70,229,0.1)]' : ''}`}
-            >
-              {plan.popular && (
-                <div className="absolute top-0 right-10 -translate-y-1/2 bg-brand-primary text-white text-[10px] font-bold font-mono px-4 py-1.5 rounded-full tracking-[0.2em] shadow-lg">
-                  MOST_DEPLOYED
-                </div>
-              )}
-
-              <div className="flex justify-between items-start mb-8">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${plan.popular ? 'bg-brand-primary text-white border-brand-primary' : 'bg-white/5 text-brand-primary border-white/10'}`}>
-                  {plan.icon}
-                </div>
-                <div className="text-right">
-                  <p className="text-[10px] font-mono text-text-dim mb-1 uppercase tracking-widest">{plan.duration}</p>
-                  <p className="text-2xl font-black tracking-tighter">{plan.price}</p>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-bold mb-4 font-mono tracking-tight">{plan.name}</h3>
-              <p className="text-sm text-text-dim leading-relaxed mb-10 min-h-16">
-                {plan.desc}
-              </p>
-
-              <div className="grid grid-cols-1 gap-y-3 mb-12 flex-1">
-                {plan.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <Check size={14} className="text-brand-primary mt-0.5 shrink-0" />
-                    <span className="text-sm font-medium text-white/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link 
-                href="/#contact"
-                className={`w-full py-5 rounded-2xl font-bold font-mono text-sm text-center transition-all duration-500 ${plan.popular ? 'bg-white text-bg-dark hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]' : 'bg-white/5 border border-white/10 hover:border-white/30'}`}
-              >
-                INITIALIZE_PROJECT
-              </Link>
-            </motion.div>
-          ))}
+        {/* Global Security Disclaimer */}
+        <div className="mt-20 text-center">
+           <div className="inline-flex items-center gap-4 py-3 px-6 rounded-full border border-white/5 bg-white/1 backdrop-blur-3xl text-[10px] font-black uppercase tracking-[0.4em] text-white/30 hover:text-white/60 transition-colors cursor-default">
+              <ShieldCheck size={12} className="text-brand-primary" />
+              All Engagements Governed by Security Protocols v2.6.
+           </div>
         </div>
       </div>
     </section>

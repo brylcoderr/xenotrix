@@ -1,14 +1,11 @@
 'use client';
 
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import Projects from '@/components/Projects';
 import { motion } from 'framer-motion';
 
 export default function WorkClient() {
   return (
-    <main className="min-h-screen bg-bg-dark text-white">
-      <Navigation />
+    <main className="min-h-screen bg-bg-dark text-white pt-20">
       
       <div className="pt-32">
         <div className="section-container pb-20 border-b border-white/5">
@@ -28,7 +25,6 @@ export default function WorkClient() {
         <Projects />
       </div>
 
-      <Footer />
     </main>
   );
 }

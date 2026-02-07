@@ -1,132 +1,131 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Lock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = [
-    { name: 'Services', href: '/services' },
-    { name: 'Process', href: '/process' },
-    { name: 'Portfolio', href: '/work' },
-    { name: 'About', href: '/about' },
+  const navLinks = [
+    { name: 'Expertise', href: '#services' },
+    { name: 'Missions', href: '#work' },
+    { name: 'Heritage', href: '#about' },
+    { name: 'Methodology', href: '#process' },
+    { name: 'Solutions', href: '#packages' },
   ];
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-1000 transition-all duration-700 border-b ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'py-4 bg-bg-dark/80 backdrop-blur-2xl border-white/5' 
-          : 'py-8 bg-transparent border-transparent'
+          ? 'py-4 bg-bg-dark/60 backdrop-blur-2xl border-b border-white/5 shadow-2xl' 
+          : 'py-8 bg-transparent'
       }`}
     >
-      <div className="section-container flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 group">
-          <div className="relative w-11 h-11 rounded-2xl overflow-hidden bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center transition-all duration-500 group-hover:bg-brand-primary group-hover:shadow-[0_0_30px_rgba(79,70,229,0.3)]">
-            <Image 
-              src="/images/logo.png" 
-              alt="XenotriX Logo" 
-              fill
-              className="object-contain p-1.5"
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl font-black tracking-tighter leading-none">XENOTRIX</span>
-            <div className="flex items-center gap-2 mt-1.5">
-               <span className="text-[10px] font-mono text-brand-primary tracking-[0.2em] leading-none uppercase">Agency</span>
-               <div className="w-1 h-1 rounded-full bg-brand-primary/40" />
-               <span className="text-[10px] font-mono text-white/40 tracking-widest leading-none uppercase italic">Engineering_v4</span>
-            </div>
-          </div>
-        </Link>
+      <div className="section-container">
+        <div className="flex items-center justify-between">
+          
+          {/* Brand Engine - Professional Identity */}
+          <Link href="/" className="flex items-center gap-4 group">
+             <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-500">
+                <Image 
+                  src="/images/logo.png" 
+                  alt="XenotriX" 
+                  fill
+                  className="object-contain"
+                />
+             </div>
+             <div className="flex flex-col">
+               <span className="text-lg font-bold tracking-tight text-white leading-none uppercase">XenotriX</span>
+               <span className="text-[7px] font-black tracking-[0.4em] text-brand-primary uppercase leading-none mt-1">Digital Engineering</span>
+             </div>
+          </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-12">
-          <div className="flex items-center gap-10">
-            {menuItems.map((item) => (
+          {/* Core Navigation - Professional Density */}
+          <div className="hidden lg:flex items-center gap-10">
+            {navLinks.map((link) => (
               <Link 
-                key={item.name} 
-                href={item.href}
-                className={`text-xs font-mono font-bold tracking-[0.2em] transition-all duration-300 uppercase ${
-                  pathname === item.href ? 'text-brand-primary' : 'text-white/60 hover:text-brand-primary'
-                }`}
+                key={link.name} 
+                href={link.href}
+                className="text-[10px] font-bold text-white/40 hover:text-white uppercase tracking-[0.2em] transition-all relative group py-2"
               >
-                {item.name}
+                {link.name}
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-brand-primary transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
-          <div className="w-px h-6 bg-white/5 mx-2" />
-          <Link 
-            href="/#contact"
-            className="flex items-center gap-3 text-xs font-mono font-bold px-8 py-3.5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white hover:text-bg-dark transition-all duration-500 shadow-xl"
-          >
-             <Lock size={14} className="opacity-50" />
-             INIT_SESSION
-          </Link>
-        </div>
 
-        {/* Mobile Toggle */}
-        <button 
-          className="lg:hidden text-white p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          {/* Operational CTA - Modern Professional */}
+          <div className="hidden lg:flex items-center gap-8">
+            <Link 
+              href="#contact" 
+              className="px-8 py-3 rounded-full bg-brand-primary text-bg-dark text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-bg-dark transition-all transform hover:scale-105 shadow-lg shadow-brand-primary/20"
+            >
+              Initiate Project
+            </Link>
+          </div>
+
+          {/* Mobile Access */}
+          <button 
+            className="lg:hidden text-white p-2 hover:bg-white/5 rounded-xl transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Modern Mobile Interface */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="fixed inset-0 top-[72px] bg-bg-dark/95 backdrop-blur-3xl z-900 lg:hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-x-0 top-0 bg-bg-dark border-b border-white/10 z-100 lg:hidden p-8 pt-24 shadow-2xl"
           >
-             <div className="section-container py-16 flex flex-col gap-10 h-full overflow-y-auto">
-                {menuItems.map((item, idx) => (
-                  <Link 
-                    key={item.name} 
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`text-4xl font-extrabold flex items-baseline gap-6 transition-colors ${
-                      pathname === item.href ? 'text-brand-primary' : 'hover:text-brand-primary'
-                    }`}
-                  >
-                    <span className="text-sm font-mono text-white/20 tracking-tighter">0{idx + 1}</span>
-                    {item.name}
-                  </Link>
-                ))}
-                <div className="mt-auto pb-24">
-                   <Link 
-                     href="/#contact"
-                     onClick={() => setIsMobileMenuOpen(false)}
-                     className="block w-full py-6 rounded-2xl bg-white text-bg-dark text-center font-black font-mono text-lg tracking-widest uppercase"
-                   >
-                      INIT_SESSION
-                   </Link>
-                </div>
-             </div>
+            <div className="flex flex-col gap-6">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-xl font-bold text-white hover:text-brand-primary transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Link 
+                href="#contact" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mt-4 px-8 py-4 rounded-xl bg-brand-primary text-bg-dark text-center font-black uppercase tracking-widest text-xs"
+              >
+                Contact Us
+              </Link>
+            </div>
+            
+            <button 
+              className="absolute top-8 right-8 text-white p-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <X size={24} />
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
     </nav>
   );
 };
-
 export default Navigation;

@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import PartnerLogos from '@/components/PartnerLogos';
 import Services from '@/components/Services';
@@ -9,17 +8,10 @@ import Testimonials from '@/components/Testimonials';
 import Projects from '@/components/Projects';
 import Comparison from '@/components/Comparison';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen selection:bg-brand-primary/30 selection:text-white">
-      {/* Visual Overlays for Vibe */}
-      <div className="scanline" />
-      <div className="noise-overlay" />
-      
-      <Navigation />
-      
+    <main className="relative min-h-screen">
       <Hero />
       
       <PartnerLogos />
@@ -32,15 +24,13 @@ export default function Home() {
       
       <About />
       
-      <Projects layout="carousel" />
+      <Projects />
 
       <Testimonials />
       
       <Comparison />
       
       <Contact />
-      
-      <Footer />
     </main>
   );
 }
