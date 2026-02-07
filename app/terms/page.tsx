@@ -1,7 +1,11 @@
- 'use client';
-
+import type { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  title: "Terms of Service | XenotriX",
+  description: "Our engineered service level agreements (SLA) and intellectual property protocols. Transparent terms for elite engineering partnerships.",
+};
 
 export default function TermsPage() {
   const terms = [

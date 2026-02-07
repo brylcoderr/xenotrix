@@ -2,43 +2,68 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "XenotriX - Web, Mobile & AI Development Excellence",
-  description: "XenotriX specializes in building websites, mobile apps, and AI solutions that connect with your ideal customers and accelerate online growth. Expert web development, mobile app development, and AI integration services.",
-  keywords: "web development, mobile app development, AI solutions, Next.js, React, Flutter, chatbot development, SEO, AEO, GEO, digital agency, web design, UI/UX design",
-  authors: [{ name: "XenotriX" }],
+  metadataBase: new URL('https://xenotrix.com'),
+  title: {
+    default: "XenotriX - Digital Engineering Agency | Web, Mobile & AI Solutions",
+    template: "%s | XenotriX"
+  },
+  description: "XenotriX is an elite digital engineering agency specializing in high-performance web apps, mobile infrastructure, and advanced AI integration for global teams.",
+  keywords: ["web development agency", "mobile app engineering", "AI integration services", "Next.js experts", "enterprise software architecture", "SaaS development"],
+  authors: [{ name: "XenotriX Engineering Team", url: "https://xenotrix.com" }],
   creator: "XenotriX",
   publisher: "XenotriX",
-  robots: "index, follow",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
+    locale: "en_US",
     url: "https://xenotrix.com/",
-    title: "XenotriX - Web, Mobile & AI Development Excellence",
-    description: "Innovative web, mobile, and AI-powered applications that empower businesses to thrive in the digital era. Transform your ideas into intelligent digital experiences.",
+    title: "XenotriX - Elite Digital Engineering & AI Architecture",
+    description: "Architecting mission-critical digital experiences. We build high-performance infrastructure and elite products for global growth.",
     siteName: "XenotriX",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/hero_visual.png",
         width: 1200,
         height: 630,
-        alt: "XenotriX - Web, Mobile & AI Development",
+        alt: "XenotriX Engineering - Digital Excellence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "XenotriX - Web, Mobile & AI Development Excellence",
-    description: "Innovative web, mobile, and AI-powered applications that empower businesses to thrive in the digital era.",
-    images: ["/twitter-image.jpg"],
+    title: "XenotriX - Elite Digital Engineering Agency",
+    description: "Deploying high-performance infrastructure and elite digital products for ambitious global teams.",
+    creator: "@brylcodes",
+    images: ["/images/hero_visual.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   alternates: {
     canonical: "https://xenotrix.com/",
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/images/logo.png" },
+      { url: "/images/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
-  themeColor: "#0a0a0a",
-  viewport: "width=device-width, initial-scale=1",
+  category: 'technology',
 };
 
 export default function RootLayout({
@@ -51,27 +76,35 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "@id": "https://xenotrix.com/#organization",
         "name": "XenotriX",
         "url": "https://xenotrix.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://xenotrix.com/logo.png"
+          "url": "https://xenotrix.com/images/logo.png"
         },
-        "description": "We're a team of web, mobile, brand and design experts using AI to build growth-driven solutions for businesses across the globe.",
+        "image": "https://xenotrix.com/images/hero_visual.png",
+        "description": "High-performance digital engineering agency specializing in Web, Mobile, and AI solutions.",
         "telephone": "+91-95576-60208",
-        "email": "contact@xenotrix.com",
+        "email": "sk@xenotrix.com",
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "India"
+          "streetAddress": "Noida",
+          "addressLocality": "Noida",
+          "addressRegion": "UP",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.5355",
+          "longitude": "77.3910"
         },
         "sameAs": [
-          "https://www.linkedin.com/company/xenotrix",
-          "https://www.instagram.com/xenotrix",
-          "https://www.facebook.com/xenotrix",
-          "https://www.reddit.com/r/xenotrix"
-        ]
+          "https://www.linkedin.com/company/xenotrixofficial",
+          "https://twitter.com/brylcodes"
+        ],
+        "priceRange": "$$$"
       },
       {
         "@type": "WebSite",
@@ -80,62 +113,7 @@ export default function RootLayout({
         "name": "XenotriX",
         "publisher": {
           "@id": "https://xenotrix.com/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://xenotrix.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
         }
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Web Development",
-        "provider": {
-          "@id": "https://xenotrix.com/#organization"
-        },
-        "areaServed": "Worldwide",
-        "description": "Professional web application development using Next.js, React, Laravel, and modern frameworks."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Mobile App Development",
-        "provider": {
-          "@id": "https://xenotrix.com/#organization"
-        },
-        "areaServed": "Worldwide",
-        "description": "Custom mobile app development using Flutter and React Native for iOS and Android."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "AI Solutions",
-        "provider": {
-          "@id": "https://xenotrix.com/#organization"
-        },
-        "areaServed": "Worldwide",
-        "description": "AI-powered chatbots, OpenAI integration, and n8n automation solutions for businesses."
-      },
-      {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "SoftwareApplication",
-            "position": 1,
-            "name": "Web Apps Development",
-            "description": "Design and development of modern, responsive web applications"
-          },
-          {
-            "@type": "SoftwareApplication",
-            "position": 2,
-            "name": "Mobile Apps Development",
-            "description": "UI/UX design and development of native and cross-platform mobile applications"
-          },
-          {
-            "@type": "SoftwareApplication",
-            "position": 3,
-            "name": "AI Solutions",
-            "description": "Chatbot development, OpenAI integration, and n8n workflow automation"
-          }
-        ]
       }
     ]
   };

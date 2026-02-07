@@ -6,7 +6,7 @@ import NextImage from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-[#020408]">
+    <section className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-[#020408]">
       {/* Immersive Background Image Layer */}
       <div className="absolute inset-0 z-0">
         <NextImage 
@@ -44,7 +44,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-10"
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-10"
             >
               Engineering <br />
               The <span className="text-brand-primary italic">Future</span> <br />

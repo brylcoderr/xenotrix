@@ -26,19 +26,24 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-text-dim uppercase tracking-widest mb-1">Direct_Mail</p>
-                  <p className="text-lg font-bold">ops@xenotrix.systems</p>
+                  <p className="text-lg font-bold">sk@xenotrix.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 group">
+              <a 
+                href="https://cal.com/brylcodes/15min" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-6 group cursor-pointer"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-500">
                   <MessageSquare size={24} />
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-text-dim uppercase tracking-widest mb-1">Live_Session</p>
-                  <p className="text-lg font-bold">Schedule a Tech Audit</p>
+                  <p className="text-lg font-bold group-hover:text-brand-primary transition-colors">Schedule a Tech Audit</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-center gap-6 group">
                 <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-500">
@@ -46,7 +51,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-text-dim uppercase tracking-widest mb-1">Headquarters</p>
-                  <p className="text-lg font-bold">Global / Remote Intelligence</p>
+                  <p className="text-lg font-bold">Noida, India</p>
                 </div>
               </div>
             </div>

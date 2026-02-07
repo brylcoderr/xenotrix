@@ -12,6 +12,7 @@ const Testimonials = () => {
   const reviews = [
     {
       company: "Ensaar Global",
+      role: "CEO",
       sector: "System Architecture",
       quote: "Xenotrix played a pivotal role in architecting Genesiv. Their deep understanding of full-stack scalability helped us deliver an elite platform ahead of schedule.",
       result: "99.9% Uptime",
@@ -19,6 +20,7 @@ const Testimonials = () => {
     },
     {
       company: "Genesiv",
+      role: "CTO",
       sector: "Cloud Infrastructure",
       quote: "Working with Xenotrix was a game-changer. They transformed our vision into a robust, user-friendly platform with unmatched technical precision.",
       result: "Global Scale",
@@ -26,6 +28,7 @@ const Testimonials = () => {
     },
     {
       company: "Fluid",
+      role: "Director of Product",
       sector: "Product Development",
       quote: "The team delivered an exceptional mobile application for Fluid. Their ability to translate complex requirements into smooth UX is remarkable.",
       result: "4.9★ Rating",
@@ -33,6 +36,7 @@ const Testimonials = () => {
     },
     {
       company: "NexGen Systems",
+      role: "Head of Engineering",
       sector: "Cybersecurity",
       quote: "Their knowledge of cloud-native infrastructure is second to none. They migrated our legacy systems with zero downtime and improved performance by 2x.",
       result: "Zero Breach",
@@ -40,6 +44,7 @@ const Testimonials = () => {
     },
     {
       company: "Solaris Tech",
+      role: "Founder",
       sector: "FinTech Logic",
       quote: "XenotriX doesn't just write code; they think about the business logic. A true technical partner for any high-growth startup environment.",
       result: "Secure Ops",
@@ -47,6 +52,7 @@ const Testimonials = () => {
     },
     {
       company: "Orbit AI",
+      role: "Lead Architect",
       sector: "ML Pipeline",
       quote: "I can attest to their commitment to quality. They build with the end-user in mind, delivering stable features that make the QA process seamless.",
       result: "AI Ready",
@@ -70,7 +76,7 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-24 md:py-32 relative overflow-hidden bg-bg-dark border-y border-white/5">
       {/* Background Ambience */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(79,70,229,0.03),transparent_70%)] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.03),transparent_70%)] pointer-events-none" />
 
       <div className="section-container relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-24 gap-12">
@@ -116,28 +122,32 @@ const Testimonials = () => {
                   key={index}
                   className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 md:px-3 flex"
                 >
-                  <div className="glass-panel p-5 md:p-6 w-full flex flex-col relative border-white/5 bg-white/1 hover:bg-white/2 hover:border-brand-primary/20 transition-all duration-300 group">
+                  <div className="glass-panel p-5 md:p-8 w-full flex flex-col relative border-white/5 bg-white/2 hover:bg-white/4 hover:border-brand-primary/30 transition-all duration-500 group">
                     {/* Corner Tag */}
-                    <div className="absolute top-0 right-0 p-2">
+                    <div className="absolute top-0 right-0 p-4">
                        <div className="flex gap-0.5">
                          {[...Array(5)].map((_, i) => (
-                           <Star key={i} size={8} className="fill-brand-primary text-brand-primary" />
+                           <Star key={i} size={10} className="fill-brand-primary text-brand-primary shadow-glow-primary" />
                          ))}
                        </div>
                     </div>
 
-                    <div className="flex items-center gap-3 mb-5">
-                      <div className="relative w-9 h-9 rounded-lg overflow-hidden border border-white/10 shrink-0">
+                    <div className="flex items-center gap-4 mb-8">
+                       <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-brand-primary/50 transition-colors duration-500">
                         <NextImage 
                           src={rev.image} 
                           alt={rev.company}
                           fill
-                          className="object-cover"
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       </div>
                       <div className="min-w-0">
-                        <h4 className="font-bold text-sm text-white tracking-tight truncate">{rev.company}</h4>
-                        <p className="text-[8px] font-mono text-brand-primary uppercase tracking-[0.2em] truncate">{rev.sector}</p>
+                        <h4 className="font-bold text-base text-white tracking-tight truncate">{rev.company}</h4>
+                        <div className="flex items-center gap-2">
+                           <span className="text-[10px] font-mono text-brand-primary font-bold uppercase tracking-widest">{rev.role}</span>
+                           <div className="w-1 h-1 rounded-full bg-white/10" />
+                           <p className="text-[9px] font-mono text-text-dim uppercase tracking-widest truncate">{rev.sector}</p>
+                        </div>
                       </div>
                     </div>
 

@@ -15,20 +15,20 @@ const PartnerLogos = () => {
              Infrastructure Partners
            </p>
            
-           <div className="flex flex-wrap justify-center md:justify-end flex-1 gap-x-12 gap-y-8 items-center opacity-30">
-             {partners.map((partner, index) => (
-               <motion.div
-                 key={index}
-                 initial={{ opacity: 0 }}
-                 whileInView={{ opacity: 1 }}
-                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                 viewport={{ once: true }}
-                 className="font-mono text-sm font-bold tracking-tighter hover:text-brand-primary transition-colors cursor-default"
-               >
-                 {partner}
-               </motion.div>
-             ))}
-           </div>
+            <div className="flex flex-wrap justify-center md:justify-end flex-1 gap-x-12 gap-y-8 items-center opacity-40">
+              {partners.map((partner, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="font-mono text-[11px] font-black tracking-[0.2em] text-white/80 hover:text-brand-primary transition-all duration-300 cursor-default uppercase"
+                >
+                  {partner.replace('_', ' ')}
+                </motion.div>
+              ))}
+            </div>
         </div>
       </div>
     </section>

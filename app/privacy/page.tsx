@@ -1,8 +1,11 @@
- 'use client';
-
+import type { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+export const metadata: Metadata = {
+  title: "Privacy Protocol | XenotriX",
+  description: "Our strict data collection and encryption protocols. Learn how we protect client data with AES-256 encryption and hardware security modules.",
+};
 
 export default function PrivacyPage() {
   const sections = [

@@ -23,9 +23,9 @@ const Footer = () => {
              <div className="flex gap-4">
                 {[
                   { Icon: Github, href: "https://github.com/brylcoderr" },
-                  { Icon: Linkedin, href: "https://www.linkedin.com/in/brylcoder" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/company/xenotrixofficial" },
                   { Icon: Twitter, href: "https://twitter.com/brylcodes" },
-                  { Icon: MessageCircle, href: "mailto:brylcodes@gmail.com" }
+                  { Icon: MessageCircle, href: "mailto:sk@xenotrix.com" }
                 ].map(({ Icon, href }, i) => (
                   <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-text-dim hover:text-white hover:bg-brand-primary transition-all duration-500">
                     <Icon size={20} />

@@ -3,12 +3,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* High-End Enterprise Palette (Deep Navy & Pure Indigo) */
-  --color-brand-primary: #4f46e5; /* Enterprise Indigo */
-  --color-brand-secondary: #0ea5e9; /* Strategic Cyan */
-  --color-bg-dark: #000212; /* Ultimate Depth Black */
-  --color-surface: #0a0c1a; /* Rich Navy Surface */
-  --color-text-dim: #64748b; /* Professional Slate-Gray */
+  /* High-End Enterprise Palette (Midnight Sapphire & Royal Indigo) */
+  --color-brand-primary: #6366f1; /* More vibrant Royal Indigo */
+  --color-brand-secondary: #3b82f6; /* Trustworthy Blue */
+  --color-bg-dark: #02040a; /* True Deep Black-Blue */
+  --color-surface: #0a0d17; /* Refined Midnight Surface */
+  --color-text-dim: #94a3b8; /* Lighter, more readable Slate */
   
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;

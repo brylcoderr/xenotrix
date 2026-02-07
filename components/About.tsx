@@ -16,7 +16,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {[
             { label: "FOUNDED", value: "2019" },
             { label: "DEPLOYMENTS", value: "150+" },
@@ -24,14 +24,14 @@ const About = () => {
           ].map((stat, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="text-center p-4 md:p-8 glass-panel border-none bg-white/2"
+              className="text-center p-8 md:p-12 glass-panel border-white/5 bg-white/2 hover:bg-white/4 transition-colors duration-500"
             >
-              <p className="text-[8px] md:text-[10px] font-mono text-brand-primary uppercase tracking-widest mb-1 md:mb-3">{stat.label}</p>
-              <p className="text-xl md:text-5xl font-black tracking-tighter">{stat.value}</p>
+              <p className="text-[10px] font-mono text-brand-primary uppercase tracking-[0.3em] mb-4">{stat.label}</p>
+              <p className="text-5xl font-black tracking-tighter text-white">{stat.value}</p>
             </motion.div>
           ))}
         </div>

@@ -103,7 +103,7 @@ const Packages = () => {
               </div>
 
               <h3 className="text-lg font-bold mb-3 font-mono tracking-tight">{plans[currentIndex].name}</h3>
-              <p className="text-xs text-text-dim leading-relaxed mb-8 min-h-[4rem]">
+              <p className="text-xs text-text-dim leading-relaxed mb-8 min-h-16">
                 {plans[currentIndex].desc}
               </p>
 
@@ -168,7 +168,7 @@ const Packages = () => {
               </div>
 
               <h3 className="text-xl font-bold mb-4 font-mono tracking-tight">{plan.name}</h3>
-              <p className="text-sm text-text-dim leading-relaxed mb-10 min-h-[4rem]">
+              <p className="text-sm text-text-dim leading-relaxed mb-10 min-h-16">
                 {plan.desc}
               </p>
 
