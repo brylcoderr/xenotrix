@@ -11,7 +11,7 @@ const CTA = () => {
       {/* Background Visuals */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <NextImage 
-          src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1485081666276-0394e8f94ccf?auto=format&fit=crop&q=80&w=2000" 
           alt="" 
           fill
           className="object-cover"
@@ -26,7 +26,7 @@ const CTA = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="w-16 h-16 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary mb-12 shadow-[0_0_30px_rgba(16,185,129,0.1)]"
+                className="w-16 h-16 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary mb-12 shadow-[0_0_30px_rgba(139,92,246,0.1)]"
               >
                 <Terminal size={32} />
               </motion.div>
@@ -57,7 +57,7 @@ const CTA = () => {
 
               <div className="mt-16 flex items-center gap-8 text-xs font-mono text-text-dim">
                 <div className="flex items-center gap-2">
-                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                   <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
                    SLOTS AVAILABLE FOR Q1 2026
                 </div>
                 <div className="hidden sm:block h-4 w-px bg-white/10" />

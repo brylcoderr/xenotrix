@@ -16,11 +16,11 @@ const Projects = () => {
       category: "Critical Systems",
       slug: "finscale-platform",
       description: "A complete architectural overhaul of core banking systems to support ultra-low latency transaction processing and multi-region resilience.",
-      image: "/images/finscale_hero.png",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=2000",
       tags: ["High-Availability", "Cloud Native", "FinSec"],
       results: "99.999% Uptime Protocol",
       impact: "Zero Critical Failures",
-      icon: <ShieldCheck className="text-emerald-400" size={18} />
+      icon: <ShieldCheck className="text-brand-primary" size={18} />
     },
     {
       title: "AutoQuery Engine Deployment",
@@ -28,11 +28,11 @@ const Projects = () => {
       category: "Edge Analytics",
       slug: "autoquery-engine",
       description: "AI-native knowledge retrieval and automated response engine for high-volume enterprise support environments with mission-critical speed.",
-      image: "/images/autoquery_hero.png",
+      image: "https://images.unsplash.com/photo-1581093588401-f2549a9446d3?auto=format&fit=crop&q=80&w=2000",
       tags: ["AI-Native", "Real-Time", "Support"],
       results: "72% Automation Rate",
       impact: "Zero Human Latency",
-      icon: <Target className="text-teal-400" size={18} />
+      icon: <Target className="text-brand-primary" size={18} />
     },
     {
       title: "Katachi Creative Ecosystem",
@@ -40,11 +40,11 @@ const Projects = () => {
       category: "Platform Design",
       slug: "katachi-studio",
       description: "Highly dynamic, non-traditional architectural layout with a slim codebase engineered for extreme flexibility and performance.",
-      image: "/images/Katachi_r1_c1_processed_by_imagy.png",
+      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000",
       tags: ["Custom UI", "Flex-Grid", "Edge"],
       results: "60% Leaner Payload",
       impact: "$14M Annual Savings",
-      icon: <Sparkles className="text-emerald-400" size={18} />
+      icon: <Sparkles className="text-brand-primary" size={18} />
     },
     {
       title: "Omni-SaaS Command Center",
@@ -52,11 +52,11 @@ const Projects = () => {
       category: "Data Visualization",
       slug: "saas-dashboard",
       description: "Enterprise-grade data visualization platform for complex states, featuring optimized state management and sub-50ms data latency.",
-      image: "/images/Dashboards (1).png",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000",
       tags: ["Zero-Trust", "Data-Vis", "Infra"],
       results: "99/100 Core Vitals",
       impact: "National Compliance",
-      icon: <ShieldCheck className="text-emerald-500" size={18} />
+      icon: <ShieldCheck className="text-brand-primary" size={18} />
     },
     {
       title: "Global Real Estate Orchestration",
@@ -64,11 +64,11 @@ const Projects = () => {
       category: "Geographic Data",
       slug: "realestate-portal",
       description: "Advanced spatial data portal for enterprise listings using hardware-accelerated rendering for zero input lag across 5,000+ nodes.",
-      image: "/images/Real estate_r1_c1_processed_by_imagy.png",
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
       tags: ["Spatial Data", "PostGIS", "Edge"],
       results: "12X Conversion Yield",
       impact: "Global Deployment",
-      icon: <Target className="text-emerald-400" size={18} />
+      icon: <Target className="text-brand-primary" size={18} />
     },
     {
       title: "Skipper SaaS Landing Protocol",
@@ -76,11 +76,11 @@ const Projects = () => {
       category: "Headless E-Com",
       slug: "saas-landing",
       description: "High-conversion architecture with sub-second delivery, utilizing optimized asset management and seamless Vercel Edge orchestration.",
-      image: "/images/Skipper_r1_c1_processed_by_imagy.png",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
       tags: ["SEO-Native", "Edge-Delivery", "UI"],
       results: "0.6s Global LCP",
       impact: "Sub-Station Autonomy",
-      icon: <Sparkles className="text-emerald-500" size={18} />
+      icon: <Sparkles className="text-brand-primary" size={18} />
     },
     {
       title: "Healthcare Data Nexus Protocol",
@@ -92,7 +92,7 @@ const Projects = () => {
       tags: ["HIPAA-Compliant", "E2EE", "Telemetry"],
       results: "99.99% Sync Rate",
       impact: "Accelerated Research",
-      icon: <Target className="text-teal-400" size={18} />
+      icon: <Target className="text-fuchsia-400" size={18} />
     },
     {
       title: "Universal E-Commerce Architecture",
@@ -104,7 +104,7 @@ const Projects = () => {
       tags: ["Serverless", "Scaling", "Retail"],
       results: "Zero-Downtime Peak",
       impact: "Record Q4 Revenue",
-      icon: <ShieldCheck className="text-emerald-400" size={18} />
+      icon: <ShieldCheck className="text-violet-400" size={18} />
     },
     {
       title: "OmniHealth Dental Ecosystem",
@@ -116,7 +116,7 @@ const Projects = () => {
       tags: ["Medical-Tech", "Scheduling", "Workflow"],
       results: "85% Staff Efficiency",
       impact: "15k+ Active Portals",
-      icon: <Target className="text-emerald-400" size={18} />
+      icon: <Target className="text-violet-400" size={18} />
     },
     {
       title: "PulseFlow Fitness Protocol",
@@ -128,7 +128,7 @@ const Projects = () => {
       tags: ["Real-Time", "Mobile-Native", "Community"],
       results: "3.5x Engagement",
       impact: "18% DAU Floor",
-      icon: <Sparkles className="text-emerald-400" size={18} />
+      icon: <Sparkles className="text-violet-400" size={18} />
     },
     {
       title: "AI Technical Landing Interface",
@@ -140,7 +140,7 @@ const Projects = () => {
       tags: ["Interactive", "Technical SEO", "AI"],
       results: "+120% Conversion",
       impact: "Production Ready",
-      icon: <Target className="text-teal-400" size={18} />
+      icon: <Target className="text-fuchsia-400" size={18} />
     },
     {
       title: "Photography Studio Banner",
@@ -152,7 +152,7 @@ const Projects = () => {
       tags: ["Asset-Optimized", "Portfolio", "Lighthouse"],
       results: "100/100 Lighthouse",
       impact: "SEO Perfection",
-      icon: <Sparkles className="text-emerald-400" size={18} />
+      icon: <Sparkles className="text-violet-400" size={18} />
     }
   ];
 
@@ -172,7 +172,7 @@ const Projects = () => {
             <span className="tag">Signature Missions</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-[0.9] text-white">
               Elite Case <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Studies.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Studies.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-dim leading-relaxed font-medium">
                A track record of absolute clinical execution in high-stakes digital environments.

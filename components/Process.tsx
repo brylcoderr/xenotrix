@@ -15,7 +15,7 @@ const Process = () => {
       shortDesc: "Deep-dive audit & blueprinting.",
       fullDesc: "Our architects perform a deep-dive audit of your business ecosystem to blueprint a path for scalable dominance. We analyze every technical friction point to ensure clinical execution.",
       features: ["Business Logic Audit", "Market Positioning", "Technical Feasibility"],
-      color: "from-emerald-500/20 to-teal-600/20"
+      color: "from-violet-500/20 to-fuchsia-600/20"
     },
     {
       id: "02",
@@ -24,7 +24,7 @@ const Process = () => {
       shortDesc: "High-fidelity development.",
       fullDesc: "Design meeting performance. We construct high-fidelity frameworks optimized for speed, security, and elite user experience using next-generation stack protocols.",
       features: ["Architecture Design", "Security Hardening", "UI/UX Orchestration"],
-      color: "from-teal-500/20 to-emerald-700/20"
+      color: "from-fuchsia-500/20 to-violet-700/20"
     },
     {
       id: "03",
@@ -33,7 +33,7 @@ const Process = () => {
       shortDesc: "Zero-friction deployment.",
       fullDesc: "Zero-friction deployment. We integrate mission-critical solutions into your existing stack with clinical precision, ensuring uninterrupted business operations.",
       features: ["CI/CD Pipeline Setup", "Zero-Downtime Migration", "Infrastructure Tuning"],
-      color: "from-emerald-400/20 to-teal-500/20"
+      color: "border-violet-400/20 bg-violet-400/5"
     }
   ];
 
@@ -41,7 +41,7 @@ const Process = () => {
     <section id="process" className="py-16 md:py-24 bg-bg-dark relative overflow-hidden">
       {/* Cinematic Background Engine */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[120px] -mr-96 -mt-96 opacity-30" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-fuchsia-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
 
       <div className="section-container relative z-10">
         <div className="flex flex-col items-center text-center mb-16 lg:hidden">
@@ -61,7 +61,7 @@ const Process = () => {
             <span className="tag">Our Methodology</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
               The Lifecycle of <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Architectural Excellence.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">The Lifecycle of <br /> Architectural Excellence.</span>
             </h2>
             <p className="text-lg text-text-dim leading-tight mb-10 font-medium opacity-80 max-w-md">
               A condensed, high-performance workflow designed for mission-critical digital scaling.
@@ -175,7 +175,7 @@ const Process = () => {
                           <div className="text-[8px] font-black text-white uppercase tracking-widest">Arch Audit</div>
                        </div>
                        <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
-                          <Zap className="text-teal-400 mb-2 transition-transform group-hover/card:scale-110" size={18} />
+                          <Zap className="text-fuchsia-400 mb-2 transition-transform group-hover/card:scale-110" size={18} />
                           <div className="text-[8px] font-black text-white uppercase tracking-widest">Efficiency</div>
                        </div>
                     </div>

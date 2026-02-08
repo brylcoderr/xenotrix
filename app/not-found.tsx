@@ -41,7 +41,7 @@ export default function NotFound() {
                   <Home size={14} />
                   Return to Command Center
                 </span>
-                <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-teal-600 translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-violet-600 translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
               </Link>
             </div>
 
@@ -52,7 +52,7 @@ export default function NotFound() {
                   E2EE_PATH_FAILED
                </div>
                <div className="flex items-center gap-3 text-[9px] font-black tracking-widest uppercase">
-                  <Cpu size={10} className="text-teal-400" />
+                  <Cpu size={10} className="text-fuchsia-400" />
                   COORDINATE_RES_0.0.1
                </div>
             </div>

@@ -6,9 +6,9 @@
 </div>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-Active_Production-00ff88?style=for-the-badge&logo=statuspage" alt="Status" />
-  <img src="https://img.shields.io/badge/Focus-Web_Mobile_AI-00d9ff?style=for-the-badge" alt="Focus" />
-  <img src="https://img.shields.io/badge/Performance-99%2B-bd00ff?style=for-the-badge" alt="Performance" />
+  <img src="https://img.shields.io/badge/Status-Active_Production-8b5cf6?style=for-the-badge&logo=statuspage" alt="Status" />
+  <img src="https://img.shields.io/badge/Focus-Web_Mobile_AI-d946ef?style=for-the-badge" alt="Focus" />
+  <img src="https://img.shields.io/badge/Performance-99%2B-c084fc?style=for-the-badge" alt="Performance" />
 </div>
 
 ---

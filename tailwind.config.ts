@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#00ff88",
-        secondary: "#00d9ff",
-        accent: "#bd00ff",
+        primary: "#8b5cf6",
+        secondary: "#d946ef",
+        accent: "#c084fc",
         "bg-deep": "#0a0a0a",
         "bg-surface": "#1a1a1a",
         "text-main": "#e0e0e0",
@@ -22,14 +22,14 @@ const config: Config = {
         mono: ["JetBrains Mono", "monospace"],
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, #00ff88 0%, #00d9ff 100%)",
-        "gradient-accent": "linear-gradient(135deg, #00d9ff 0%, #bd00ff 100%)",
+        "gradient-primary": "linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%)",
+        "gradient-accent": "linear-gradient(135deg, #d946ef 0%, #c084fc 100%)",
         "gradient-dark": "linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%)",
       },
       boxShadow: {
-        "glow-primary": "0 0 20px rgba(0, 255, 136, 0.3)",
-        "glow-secondary": "0 0 20px rgba(0, 217, 255, 0.3)",
-        "glow-accent": "0 0 20px rgba(189, 0, 255, 0.3)",
+        "glow-primary": "0 0 20px rgba(139, 92, 246, 0.3)",
+        "glow-secondary": "0 0 20px rgba(217, 70, 239, 0.3)",
+        "glow-accent": "0 0 20px rgba(192, 132, 252, 0.3)",
       },
       animation: {
         fadeIn: "fadeIn 0.6s ease-out",

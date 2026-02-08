@@ -27,7 +27,7 @@ const HowWeThink = () => {
       icon: <Shield size={22} />,
       title: "Secure by Design",
       desc: "Security isn't a plugin. It's woven into every layer of our stack, from data encryption to edge-level protection and compliance.",
-      color: "border-emerald-400/20 bg-emerald-400/5"
+      color: "border-violet-400/20 bg-violet-400/5"
     }
   ];
 

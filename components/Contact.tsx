@@ -42,7 +42,7 @@ const Contact = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
       <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
       <div className="absolute top-[10%] right-[5%] w-[600px] h-[600px] bg-brand-primary/5 rounded-full blur-[140px] opacity-20 animate-pulse" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-emerald-600/5 rounded-full blur-[120px] opacity-20" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-violet-600/5 rounded-full blur-[120px] opacity-20" />
       
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 xl:gap-24 items-center">
@@ -53,7 +53,7 @@ const Contact = () => {
               <span className="tag">Strategic Consultation Bridge</span>
               <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
                 Initiate Your <br />
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Digital Breakthrough.</span>
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Digital Breakthrough.</span>
               </h2>
               <p className="text-lg md:text-xl text-text-dim leading-snug font-medium opacity-80 max-w-lg">
                 Our clinical engineering team is ready to architect your next mission-critical deployment. Secure your primary evaluation today.
@@ -112,16 +112,16 @@ const Contact = () => {
                       <div className="flex gap-2">
                          <div className="w-2.5 h-2.5 rounded-full bg-red-500/20 border border-red-500/40" />
                          <div className="w-2.5 h-2.5 rounded-full bg-amber-500/20 border border-amber-500/40" />
-                         <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/20 border border-emerald-500/40" />
+                         <div className="w-2.5 h-2.5 rounded-full bg-violet-500/20 border border-violet-500/40" />
                       </div>
                       <div className="h-4 w-px bg-white/10 hidden sm:block" />
                       <div className="text-[10px] font-black text-white/40 uppercase tracking-[0.4em] hidden sm:block">
                         Terminal_ID::XNX-882
                       </div>
                    </div>
-                   <div className="flex items-center gap-3 px-4 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                      <div className={`w-1 h-1 rounded-full animate-pulse ${status === 'success' ? 'bg-brand-primary' : 'bg-emerald-500'}`} />
-                      <span className="text-[9px] font-black text-emerald-500 uppercase tracking-widest">
+                   <div className="flex items-center gap-3 px-4 py-1.5 rounded-lg bg-violet-500/10 border border-violet-500/20">
+                      <div className={`w-1 h-1 rounded-full animate-pulse ${status === 'success' ? 'bg-brand-primary' : 'bg-violet-500'}`} />
+                      <span className="text-[9px] font-black text-violet-500 uppercase tracking-widest">
                         {status === 'success' ? 'PROTOCOL_COMPLETE' : 'GATEWAY_READY'}
                       </span>
                    </div>
@@ -250,7 +250,7 @@ const Contact = () => {
                               disabled={status === 'submitting'}
                               className="w-full relative group/btn overflow-hidden disabled:opacity-50"
                              >
-                                <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-emerald-600 rounded-2xl" />
+                                <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-violet-600 rounded-2xl" />
                                 <div className="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 rounded-2xl" />
                                 <div className="relative z-10 py-6 flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-bg-dark group-hover/btn:text-bg-dark transition-colors">
                                   {status === 'submitting' ? 'Transmitting Data...' : 'Initiate Protocol'}

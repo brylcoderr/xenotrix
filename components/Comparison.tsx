@@ -1,16 +1,28 @@
 import { Shield, Zap, TrendingUp, BarChart } from 'lucide-react';
+import Image from 'next/image';
 
 const Comparison = () => {
   return (
-    <section className="py-16 md:py-32 relative bg-surface/20">
-      <div className="section-container">
+    <section className="py-16 md:py-32 relative overflow-hidden bg-bg-dark">
+      {/* Background Visual Layer */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <Image 
+          src="/images/ecommerce_hero.png" 
+          alt="" 
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-bg-dark/60" />
+      </div>
+
+      <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="tag">Strategic Edge</span>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-white leading-[0.85]">
             The <span className="text-brand-primary">Advantage</span> of <br />
             Elite Partnership.
           </h2>
-          <p className="text-xl text-text-dim leading-relaxed">
+          <p className="text-xl text-text-dim leading-relaxed font-medium">
              We outperform traditional agencies by focusing on high-performance infrastructure and precision digital engineering.
           </p>
         </div>

@@ -10,42 +10,42 @@ const Services = () => {
       title: "Enterprise Web Systems",
       desc: "We construct robust, high-availability web ecosystems using next-generation architectural patterns for mission-critical performance.",
       metrics: "Load Time: < 0.8s",
-      color: "from-emerald-500/20 to-teal-500/20"
+      color: "from-violet-500/20 to-fuchsia-500/20"
     },
     {
       icon: <Smartphone size={28} />,
       title: "Native Mobile Infrastructure",
       desc: "Engineered for elite user engagement. We build seamless, high-performance mobile products that dominate their market sector.",
       metrics: "Crash-Free Rate: 99.9%",
-      color: "from-teal-500/20 to-emerald-600/20"
+      color: "from-fuchsia-500/20 to-violet-600/20"
     },
     {
       icon: <Cpu size={28} />,
       title: "Advanced AI & Neural Logic",
       desc: "Deployment of custom LLM pipelines and predictive neural networks to automate complex operations and unlock strategic foresight.",
       metrics: "Inference Latency: < 20ms",
-      color: "from-emerald-600/20 to-green-500/20"
+      color: "from-violet-600/20 to-purple-500/20"
     },
     {
       icon: <Cloud size={28} />,
       title: "Elastic Cloud Orchestration",
       desc: "Multi-region cloud infrastructure designed for absolute resilience, zero-downtime scaling, and global edge delivery.",
       metrics: "Availability: 99.99%",
-      color: "from-green-500/20 to-teal-400/20"
+      color: "from-purple-500/20 to-fuchsia-400/20"
     },
     {
       icon: <ShieldCheck size={28} />,
       title: "Hardened Cyber Security",
       desc: "Clinical security audits and architectural hardening to ensure your digital ecosystem remains impenetrable and compliant.",
       metrics: "Threat Level: Neutralized",
-      color: "from-teal-400/20 to-emerald-500/20"
+      color: "from-fuchsia-400/20 to-violet-500/20"
     },
     {
       icon: <BarChart size={28} />,
       title: "Strategic Growth Engineering",
       desc: "Data-driven optimization protocols that leverage advanced analytics to scale your engagement and compound business value.",
       metrics: "Avg ROI Yield: 12X",
-      color: "from-emerald-500/20 to-indigo-500/20"
+      color: "from-violet-500/20 to-indigo-500/20"
     }
   ];
 
@@ -61,7 +61,7 @@ const Services = () => {
             <span className="tag">Our Capabilities</span>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
               Hardened <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Digital Solutions.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Digital Solutions.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-dim leading-tight max-w-xl font-medium opacity-80">
               We provide the architectural foundation for the world&apos;s most ambitious digital products, engineered for absolute scale and reliability.

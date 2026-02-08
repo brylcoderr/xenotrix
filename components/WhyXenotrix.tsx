@@ -61,19 +61,19 @@ const WhyXenotrix = () => {
       icon: <Users className="w-10 h-10" />,
       count: counts.customers,
       label: 'Elite Partners',
-      color: 'teal-500',
+      color: 'fuchsia-500',
     },
     {
       icon: <Globe className="w-10 h-10" />,
       count: counts.countries,
       label: 'Global Node Reach',
-      color: 'emerald-400',
+      color: 'violet-400',
     },
   ];
 
   return (
     <section ref={ref} className="py-24 bg-bg-deep relative overflow-hidden font-sans border-y border-white/5">
-      {/* Particle Background Effect - Emerald Calibrated */}
+      {/* Particle Background Effect - Violet Calibrated */}
       <div className="absolute inset-0 opacity-10">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -164,11 +164,11 @@ const WhyXenotrix = () => {
              </div>
              <div className="flex gap-4 ml-6">
                <span className="text-brand-primary opacity-40">03</span>
-               <span className="text-text-dim">partners: <span className="text-teal-400">{counts.customers}+</span>,</span>
+               <span className="text-text-dim">partners: <span className="text-fuchsia-400">{counts.customers}+</span>,</span>
              </div>
              <div className="flex gap-4 ml-6">
                <span className="text-brand-primary opacity-40">04</span>
-               <span className="text-text-dim">reach: <span className="text-emerald-500">&apos;GLOBAL_{counts.countries}&apos;</span>,</span>
+               <span className="text-text-dim">reach: <span className="text-violet-500">&apos;GLOBAL_{counts.countries}&apos;</span>,</span>
              </div>
              <div className="flex gap-4 ml-6">
                <span className="text-brand-primary opacity-40">05</span>

@@ -41,7 +41,7 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="p-4 lg:p-8 rounded-3xl lg:rounded-[2.5rem] bg-linear-to-br from-brand-primary to-emerald-700 shadow-2xl shadow-brand-primary/20 text-bg-dark text-center group"
+                  className="p-4 lg:p-8 rounded-3xl lg:rounded-[2.5rem] bg-linear-to-br from-brand-primary to-violet-700 shadow-2xl shadow-brand-primary/20 text-bg-dark text-center group"
                 >
                    <div className="text-2xl lg:text-4xl font-black mb-0 lg:mb-1 tracking-tighter group-hover:scale-110 transition-transform duration-500">5+</div>
                    <div className="text-[8px] lg:text-[10px] font-black uppercase tracking-[0.2em] opacity-80">Elite Years</div>
@@ -100,7 +100,7 @@ const About = () => {
               <span className="tag">Our Philosophical Core</span>
               <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
                 Engineering <br />
-                The Protocol of <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Digital Trust.</span>
+                The Protocol of <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Digital Trust.</span>
               </h2>
               
               <p className="text-lg md:text-2xl text-text-dim leading-snug mb-10 font-medium opacity-80">
@@ -126,7 +126,7 @@ const About = () => {
                 
                 <div className="relative group cursor-default">
                   <div className="flex gap-4">
-                    <div className="shrink-0 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 group-hover:bg-teal-500 group-hover:text-bg-dark transition-all duration-700 shadow-xl group-hover:shadow-teal-500/20">
+                    <div className="shrink-0 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-fuchsia-400 group-hover:bg-fuchsia-500 group-hover:text-bg-dark transition-all duration-700 shadow-xl group-hover:shadow-fuchsia-500/20">
                       <Globe size={24} />
                     </div>
                     <div>

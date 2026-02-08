@@ -10,7 +10,7 @@ const Packages = () => {
       name: "Strategic Sprint",
       tagline: "High-intensity validation",
       price: "Initiation",
-      icon: <Target className="text-emerald-500" size={24} />,
+      icon: <Target className="text-violet-500" size={24} />,
       features: [
         "Rapid Strategic Prototyping",
         "Technical Architecture Audit",
@@ -18,7 +18,7 @@ const Packages = () => {
         "High-Fidelity Interface Design",
         "Deployment Roadmap Blueprint"
       ],
-      color: "from-emerald-500/10 to-teal-500/10"
+      color: "from-violet-500/10 to-fuchsia-500/10"
     },
     {
       name: "Elite Squad Ops",
@@ -33,13 +33,13 @@ const Packages = () => {
         "Security Hardening Active",
         "Continuous Optimization Loops"
       ],
-      color: "from-emerald-600/20 to-teal-700/20"
+      color: "from-violet-600/20 to-fuchsia-700/20"
     },
     {
       name: "Core Transformation",
       tagline: "Legacy modernizations & AI scaling",
       price: "Enterprise",
-      icon: <ShieldCheck className="text-emerald-500" size={24} />,
+      icon: <ShieldCheck className="text-violet-500" size={24} />,
       features: [
         "Core Ecosystem Modernization",
         "Neural Pipeline Orchestration",
@@ -47,7 +47,7 @@ const Packages = () => {
         "24/7 Production Stability",
         "Global Scale Management"
       ],
-      color: "from-emerald-600/10 to-teal-600/10"
+      color: "from-violet-600/10 to-fuchsia-600/10"
     }
   ];
 
@@ -55,7 +55,7 @@ const Packages = () => {
     <section id="packages" className="py-16 md:py-24 bg-bg-dark relative overflow-hidden">
       {/* Decorative Structural Engine */}
       <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-primary/5 rounded-full blur-[150px] -mr-96 -mt-96 opacity-30" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
       <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
 
       <div className="section-container relative z-10">
@@ -63,7 +63,7 @@ const Packages = () => {
           <span className="tag justify-center!">Engagement Structures</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
             Engineered <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Engagement Models.</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Engagement Models.</span>
           </h2>
           <p className="text-lg md:text-xl text-text-dim leading-tight font-medium opacity-80 max-w-2xl mx-auto">
              Select the operational protocol that aligns with your organization&apos;s architectural scale and mission-critical objectives.
@@ -89,7 +89,7 @@ const Packages = () => {
                     <div className={`absolute inset-0 bg-linear-to-br ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
                     
                     {plan.popular && (
-                      <div className="absolute top-4 right-4 py-1.5 px-4 rounded-full bg-linear-to-r from-brand-primary to-emerald-600 text-[8px] font-black uppercase tracking-[0.3em] text-bg-dark shadow-2xl flex items-center gap-2">
+                      <div className="absolute top-4 right-4 py-1.5 px-4 rounded-full bg-linear-to-r from-brand-primary to-violet-600 text-[8px] font-black uppercase tracking-[0.3em] text-bg-dark shadow-2xl flex items-center gap-2">
                         <Activity size={8} className="animate-pulse" />
                         Primary Protocol
                       </div>
@@ -175,7 +175,7 @@ const Packages = () => {
                 <div className={`absolute inset-0 bg-linear-to-br ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
                 
                 {plan.popular && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 py-2 px-6 rounded-full bg-linear-to-r from-brand-primary to-emerald-600 text-[10px] font-black uppercase tracking-[0.4em] text-bg-dark shadow-2xl flex items-center gap-3">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 py-2 px-6 rounded-full bg-linear-to-r from-brand-primary to-violet-600 text-[10px] font-black uppercase tracking-[0.4em] text-bg-dark shadow-2xl flex items-center gap-3">
                     <Activity size={10} className="animate-pulse" />
                     Primary Protocol
                   </div>

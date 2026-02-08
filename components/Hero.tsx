@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-linear-to-b from-bg-dark via-bg-dark/60 to-bg-dark z-10" />
         <div className="absolute inset-0 bg-linear-to-r from-bg-dark via-transparent to-bg-dark z-10 opacity-60" />
         <Image 
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072" 
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000" 
           alt="Global Digital Infrastructure"
           fill
           priority
@@ -26,7 +26,7 @@ const Hero = () => {
         />
         {/* Animated Light Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
       </motion.div>
       
       {/* Premium Content Architecture */}
@@ -48,7 +48,7 @@ const Hero = () => {
             
             <h1 className="text-6xl md:text-8xl lg:text-[110px] font-bold tracking-tighter leading-[0.8] mb-14 text-white">
               Architecting <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-400 to-emerald-600 animate-gradient">Future Systems.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Future Systems.</span>
             </h1>
             
             <p className="text-lg md:text-2xl text-text-dim max-w-3xl mb-16 leading-tight font-medium opacity-80 italic">
@@ -58,7 +58,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
               <Link href="#contact" className="btn-primary group relative overflow-hidden">
                 <span className="relative z-10 text-bg-dark">Initiate Partnership</span>
-                <div className="absolute inset-0 bg-linear-to-r from-emerald-500 to-teal-500 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-linear-to-r from-violet-500 to-fuchsia-500 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                 <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform text-bg-dark" />
               </Link>
               <Link href="#work" className="btn-secondary group">

@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -24,7 +24,7 @@ const caseData = {
       { category: "Backend", tech: "Golang, Node.js Microservices" },
       { category: "Infrastructure", tech: "AWS EKS, Redis, Managed Kafka" }
     ],
-    image: "/images/finscale_hero.png",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "medinode-mobile": {
@@ -45,7 +45,7 @@ const caseData = {
       { category: "Cloud", tech: "AWS Fargate, DynamoDB, S3" },
       { category: "Encryption", tech: "Libsodium, Signal Protocol" }
     ],
-    image: "/images/medinode_hero.png",
+    image: "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "autoquery-engine": {
@@ -66,7 +66,7 @@ const caseData = {
       { category: "Backend", tech: "FastAPI, Docker, Google Cloud" },
       { category: "Database", tech: "MongoDB, Redis" }
     ],
-    image: "/images/autoquery_hero.png",
+    image: "https://images.unsplash.com/photo-1581093588401-f2549a9446d3?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "healthcare-platform": {
@@ -87,7 +87,7 @@ const caseData = {
       { category: "CMS", tech: "Strapi Headless CMS" },
       { category: "DB", tech: "PostgreSQL with Prisma ORM" }
     ],
-    image: "/images/Healthcare_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "ecommerce-platform": {
@@ -108,7 +108,7 @@ const caseData = {
       { category: "Frontend", tech: "React, GSAP Animations" },
       { category: "Deployment", tech: "Vercel Edge Functions" }
     ],
-    image: "/images/ecommerce_hero.png",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "fitness-platform": {
@@ -129,7 +129,7 @@ const caseData = {
       { category: "Mobile", tech: "React Native Expo" },
       { category: "Payment", tech: "Stripe Connect Integration" }
     ],
-    image: "/images/Fitness_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "realestate-portal": {
@@ -150,7 +150,7 @@ const caseData = {
       { category: "DB", tech: "Managed PostgreSQL" },
       { category: "API", tech: "Python/FastAPI Service layer" }
     ],
-    image: "/images/Real estate_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "saas-dashboard": {
@@ -170,7 +170,7 @@ const caseData = {
       { category: "Visualization", tech: "Recharts, D3.js" },
       { category: "Deployment", tech: "Vercel" }
     ],
-    image: "/images/Dashboards (1).png",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "saas-landing": {
@@ -190,7 +190,7 @@ const caseData = {
       { category: "Optimization", tech: "Vercel Edge, ISR" },
       { category: "Design", tech: "Tailwind CSS" }
     ],
-    image: "/images/Skipper_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "ai-landing-page": {
@@ -210,7 +210,7 @@ const caseData = {
       { category: "Interactions", tech: "Three.js, Framer Motion" },
       { category: "Analytics", tech: "Posthog, Mixpanel" }
     ],
-    image: "/images/Pointer_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4628c9757?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "photography-banner": {
@@ -230,7 +230,7 @@ const caseData = {
       { category: "Images", tech: "Next Image, Cloudinary" },
       { category: "Hosting", tech: "Vercel" }
     ],
-    image: "/images/PhotoGraphy_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   },
   "katachi-studio": {
@@ -250,7 +250,7 @@ const caseData = {
       { category: "Logic", tech: "React Server Components" },
       { category: "Performance", tech: "Edge Cached" }
     ],
-    image: "/images/Katachi_r1_c1_processed_by_imagy.png",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000",
     demoUrl: ""
   }
 };
@@ -341,7 +341,7 @@ export default function CaseStudyPage() {
                 <div className="glass-panel p-8">
                    <p className="font-mono text-[10px] text-text-dim uppercase tracking-widest mb-4">DEPLOYMENT_STATUS</p>
                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
                       <p className="font-bold text-sm tracking-tight">{data.status}</p>
                    </div>
                 </div>
