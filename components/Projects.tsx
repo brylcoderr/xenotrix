@@ -16,7 +16,7 @@ const Projects = () => {
       category: "Critical Systems",
       slug: "finscale-platform",
       description: "A complete architectural overhaul of core banking systems to support ultra-low latency transaction processing and multi-region resilience.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=2000",
+      image: "/images/finscale_hero.png",
       tags: ["High-Availability", "Cloud Native", "FinSec"],
       results: "99.999% Uptime Protocol",
       impact: "Zero Critical Failures",
@@ -28,7 +28,7 @@ const Projects = () => {
       category: "Edge Analytics",
       slug: "autoquery-engine",
       description: "AI-native knowledge retrieval and automated response engine for high-volume enterprise support environments with mission-critical speed.",
-      image: "https://images.unsplash.com/photo-1581093588401-f2549a9446d3?auto=format&fit=crop&q=80&w=2000",
+      image: "/images/autoquery_hero.png",
       tags: ["AI-Native", "Real-Time", "Support"],
       results: "72% Automation Rate",
       impact: "Zero Human Latency",
@@ -40,7 +40,7 @@ const Projects = () => {
       category: "Platform Design",
       slug: "katachi-studio",
       description: "Highly dynamic, non-traditional architectural layout with a slim codebase engineered for extreme flexibility and performance.",
-      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000",
+      image: "/images/Katachi_r1_c1_processed_by_imagy.png",
       tags: ["Custom UI", "Flex-Grid", "Edge"],
       results: "60% Leaner Payload",
       impact: "$14M Annual Savings",
@@ -52,7 +52,7 @@ const Projects = () => {
       category: "Data Visualization",
       slug: "saas-dashboard",
       description: "Enterprise-grade data visualization platform for complex states, featuring optimized state management and sub-50ms data latency.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2000",
+      image: "/images/Dashboards (1).png",
       tags: ["Zero-Trust", "Data-Vis", "Infra"],
       results: "99/100 Core Vitals",
       impact: "National Compliance",
@@ -64,7 +64,7 @@ const Projects = () => {
       category: "Geographic Data",
       slug: "realestate-portal",
       description: "Advanced spatial data portal for enterprise listings using hardware-accelerated rendering for zero input lag across 5,000+ nodes.",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
+      image: "/images/Real estate_r1_c1_processed_by_imagy.png",
       tags: ["Spatial Data", "PostGIS", "Edge"],
       results: "12X Conversion Yield",
       impact: "Global Deployment",
@@ -76,7 +76,7 @@ const Projects = () => {
       category: "Headless E-Com",
       slug: "saas-landing",
       description: "High-conversion architecture with sub-second delivery, utilizing optimized asset management and seamless Vercel Edge orchestration.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000",
+      image: "/images/Skipper_r1_c1_processed_by_imagy.png",
       tags: ["SEO-Native", "Edge-Delivery", "UI"],
       results: "0.6s Global LCP",
       impact: "Sub-Station Autonomy",
@@ -161,7 +161,7 @@ const Projects = () => {
 
   return (
     <section id="work" className="py-16 md:py-24 bg-bg-dark overflow-hidden relative">
-       {/* Background structural typography */}
+      {/* Background structural typography */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[25vw] font-black text-white/1 select-none pointer-events-none tracking-tighter uppercase whitespace-nowrap leading-none">
         Architecting
       </div>
@@ -175,18 +175,18 @@ const Projects = () => {
               <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Studies.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-dim leading-relaxed font-medium">
-               A track record of absolute clinical execution in high-stakes digital environments.
+              A track record of absolute clinical execution in high-stakes digital environments.
             </p>
           </div>
-          
+
           <div className="flex gap-4">
-            <button 
+            <button
               onClick={prev}
               className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-bg-dark transition-all duration-500 group"
             >
               <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             </button>
-            <button 
+            <button
               onClick={next}
               className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-bg-dark transition-all duration-500 group"
             >
@@ -217,36 +217,36 @@ const Projects = () => {
                   <h3 className="text-4xl md:text-5xl font-bold tracking-tighter mb-6 leading-[0.9] text-white">
                     {cases[currentIndex].title}
                   </h3>
-                  
+
                   <p className="text-lg md:text-xl text-text-dim leading-relaxed font-medium">
                     {cases[currentIndex].description}
                   </p>
 
                   <div className="grid grid-cols-2 gap-3 lg:gap-5">
                     <div className="p-4 lg:p-6 bg-linear-to-br from-white/3 to-white/1 rounded-2xl lg:rounded-4xl border border-white/5 relative overflow-hidden group/box">
-                       <div className="absolute top-0 right-0 p-3 lg:p-4 opacity-10 group-hover/box:opacity-20 transition-opacity">
-                          {cases[currentIndex].icon}
-                       </div>
-                       <span className="text-[7px] lg:text-[10px] font-black text-white/30 uppercase tracking-[0.2em] lg:tracking-[0.3em] mb-1 lg:mb-2 block">Performance Yield</span>
-                       <div className="text-sm lg:text-xl font-black text-white tracking-tight">{cases[currentIndex].results}</div>
+                      <div className="absolute top-0 right-0 p-3 lg:p-4 opacity-10 group-hover/box:opacity-20 transition-opacity">
+                        {cases[currentIndex].icon}
+                      </div>
+                      <span className="text-[7px] lg:text-[10px] font-black text-white/30 uppercase tracking-[0.2em] lg:tracking-[0.3em] mb-1 lg:mb-2 block">Performance Yield</span>
+                      <div className="text-sm lg:text-xl font-black text-white tracking-tight">{cases[currentIndex].results}</div>
                     </div>
                     <div className="p-4 lg:p-6 bg-linear-to-br from-white/3 to-white/1 rounded-2xl lg:rounded-4xl border border-white/5 relative overflow-hidden group/box">
-                       <span className="text-[7px] lg:text-[10px] font-black text-white/30 uppercase tracking-[0.2em] lg:tracking-[0.3em] mb-1 lg:mb-2 block">Business Impact</span>
-                       <div className="text-sm lg:text-xl font-black text-white tracking-tight">{cases[currentIndex].impact}</div>
+                      <span className="text-[7px] lg:text-[10px] font-black text-white/30 uppercase tracking-[0.2em] lg:tracking-[0.3em] mb-1 lg:mb-2 block">Business Impact</span>
+                      <div className="text-sm lg:text-xl font-black text-white tracking-tight">{cases[currentIndex].impact}</div>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-4 pt-2 text-[10px] font-black tracking-widest uppercase opacity-40">
                     {cases[currentIndex].tags.map(tag => (
                       <span key={tag} className="flex items-center gap-2">
-                         <div className="w-1 h-1 rounded-full bg-brand-primary" />
-                         {tag}
+                        <div className="w-1 h-1 rounded-full bg-brand-primary" />
+                        {tag}
                       </span>
                     ))}
                   </div>
 
-                  <Link 
-                    href={`/work/${cases[currentIndex].slug}`} 
+                  <Link
+                    href={`/work/${cases[currentIndex].slug}`}
                     className="inline-flex items-center gap-4 text-white font-black text-[10px] uppercase tracking-[0.3em] hover:text-brand-primary transition-all group pt-6"
                   >
                     View Operational Data
@@ -258,13 +258,13 @@ const Projects = () => {
               {/* Project Image */}
               <div className="lg:col-span-12 xl:col-span-7 order-1 xl:order-2">
                 <div className="relative aspect-16/10 w-full rounded-[2.5rem] overflow-hidden shadow-[0_50px_120px_-30px_rgba(0,0,0,0.6)] group border border-white/10">
-                  <Image 
+                  <Image
                     src={cases[currentIndex].image}
                     alt={cases[currentIndex].title}
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
-                   {/* Cinematic Overlays */}
+                  {/* Cinematic Overlays */}
                   <div className="absolute inset-0 bg-linear-to-br from-bg-dark/40 via-transparent to-transparent" />
                 </div>
               </div>
