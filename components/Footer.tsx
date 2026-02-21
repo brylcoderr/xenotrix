@@ -11,14 +11,14 @@ const Footer = () => {
     <footer className="bg-bg-dark pt-12 pb-8 border-t border-white/5 font-sans">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-4 max-w-sm">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
               <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-500">
-                <Image 
-                  src="/images/logo.png" 
-                  alt="XenotriX" 
+                <Image
+                  src="/images/logo.png"
+                  alt="XenotriX"
                   fill
                   className="object-contain"
                 />
@@ -32,9 +32,9 @@ const Footer = () => {
               {[
                 { icon: <Linkedin size={16} />, href: "https://www.linkedin.com/company/xenotrixofficial" }
               ].map((social, i) => (
-                <Link 
-                  key={i} 
-                  href={social.href} 
+                <Link
+                  key={i}
+                  href={social.href}
                   target="_blank"
                   className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white/30 hover:bg-brand-primary hover:text-bg-dark transition-all transform hover:scale-110"
                 >
@@ -62,7 +62,7 @@ const Footer = () => {
               <li><Link href="#work" className="text-xs text-text-dim hover:text-white transition-colors">Case Studies</Link></li>
               <li><Link href="#process" className="text-xs text-text-dim hover:text-white transition-colors">Our Method</Link></li>
               <li><Link href="#contact" className="text-xs text-text-dim hover:text-white transition-colors">Contact Us</Link></li>
-              <li><a href="https://cal.com/brylcodes/15min" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:text-white transition-colors font-bold">Schedule Meet</a></li>
+              <li><a href="https://cal.com/xenotrix/15min" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-primary hover:text-white transition-colors font-bold">Schedule Meet</a></li>
             </ul>
           </div>
 
@@ -76,11 +76,13 @@ const Footer = () => {
               </div>
               <div className="flex gap-3 items-center">
                 <Mail size={16} className="text-brand-primary shrink-0" />
-                <p className="text-xs text-text-dim">sk@xenotrix.com</p>
+                <p className="text-xs text-text-dim">xenotrix.connect@gmail.com</p>
               </div>
               <div className="flex gap-3 items-center">
                 <Phone size={16} className="text-brand-primary shrink-0" />
-                <p className="text-xs text-text-dim">+91-95576-60208</p>
+                <a href="https://wa.me/918679672283" target="_blank" rel="noopener noreferrer" className="text-xs text-text-dim hover:text-white transition-colors">
+                  +91-86796-72283
+                </a>
               </div>
             </div>
           </div>
