@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     siteName: "XenotriX",
     images: [{ url: "/images/hero_visual.png" }],
   },
+  verification: {
+    google: 'googlea347b71fda020373',
+  },
 };
 
 export default function RootLayout({
