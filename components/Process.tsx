@@ -55,7 +55,7 @@ const Process = () => {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-20 items-start">
-          
+
           {/* Static Header Column - Desktop Only */}
           <div className="hidden lg:col-span-5 lg:block sticky top-32">
             <span className="tag">Our Methodology</span>
@@ -73,26 +73,24 @@ const Process = () => {
                 <button
                   key={step.id}
                   onClick={() => setActiveStep(i)}
-                  className={`w-full flex items-center gap-5 p-5 rounded-4xl transition-all duration-500 border group ${
-                    activeStep === i 
-                    ? 'bg-white/5 border-white/10 shadow-2xl shadow-brand-primary/10' 
-                    : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
-                  }`}
+                  className={`w-full flex items-center gap-5 p-5 rounded-4xl transition-all duration-500 border group ${activeStep === i
+                      ? 'bg-white/5 border-white/10 shadow-2xl shadow-brand-primary/10'
+                      : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
+                    }`}
                 >
-                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-500 ${
-                    activeStep === i 
-                    ? `bg-linear-to-r ${step.color.replace('/20', '')} text-bg-dark scale-110 shadow-lg` 
-                    : 'bg-white/5 text-white/40'
-                  }`}>
+                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-500 ${activeStep === i
+                      ? `bg-linear-to-r ${step.color.replace('/20', '')} text-bg-dark scale-110 shadow-lg`
+                      : 'bg-white/5 text-white/40'
+                    }`}>
                     {step.icon}
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-0.5">Phase {step.id}</div>
+                    <div className="text-[12px] font-black uppercase tracking-[0.3em] text-brand-primary mb-0.5">Phase {step.id}</div>
                     <div className="text-base font-bold text-white tracking-tight">{step.title}</div>
                   </div>
-                  <ChevronRight 
-                    size={16} 
-                    className={`ml-auto transition-transform duration-500 ${activeStep === i ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} 
+                  <ChevronRight
+                    size={16}
+                    className={`ml-auto transition-transform duration-500 ${activeStep === i ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}
                   />
                 </button>
               ))}
@@ -107,26 +105,25 @@ const Process = () => {
                 <button
                   key={step.id}
                   onClick={() => setActiveStep(i)}
-                  className={`flex-1 flex flex-col items-center py-3 rounded-2xl transition-all duration-500 ${
-                    activeStep === i ? 'bg-white/5 text-brand-primary' : 'text-white/20'
-                  }`}
+                  className={`flex-1 flex flex-col items-center py-3 rounded-2xl transition-all duration-500 ${activeStep === i ? 'bg-white/5 text-brand-primary' : 'text-white/20'
+                    }`}
                 >
                   <div className="mb-1">{step.icon}</div>
-                  <div className="text-[8px] font-black uppercase tracking-widest">{step.id}</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest">{step.id}</div>
                 </button>
               ))}
             </div>
 
             <div className="relative min-h-[500px] p-8 lg:p-16 overflow-hidden group border border-white/5 rounded-5xl bg-white/3 backdrop-blur-3xl">
               {/* Dynamic Animated Background */}
-              <motion.div 
+              <motion.div
                 key={`bg-${activeStep}`}
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className={`absolute inset-0 bg-linear-to-br ${steps[activeStep].color} opacity-[0.08]`} 
+                className={`absolute inset-0 bg-linear-to-br ${steps[activeStep].color} opacity-[0.08]`}
               />
-              
+
               <div className="relative z-10 h-full flex flex-col">
                 <motion.div
                   key={activeStep}
@@ -135,13 +132,13 @@ const Process = () => {
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <div className="flex items-center gap-4 mb-6">
-                     <span className="text-6xl md:text-[100px] font-black text-white/5 leading-none tracking-tighter select-none">
-                       {steps[activeStep].id}
-                     </span>
-                     <div className="flex-1 h-px bg-white/5" />
-                     <div className="px-5 py-2 rounded-full border border-brand-primary/20 bg-brand-primary/5 text-[10px] font-black text-brand-primary uppercase tracking-widest animate-pulse">
-                       System_Phase_Live
-                     </div>
+                    <span className="text-6xl md:text-[100px] font-black text-white/5 leading-none tracking-tighter select-none">
+                      {steps[activeStep].id}
+                    </span>
+                    <div className="flex-1 h-px bg-white/5" />
+                    <div className="px-5 py-2 rounded-full border border-brand-primary/20 bg-brand-primary/5 text-[10px] font-black text-brand-primary uppercase tracking-widest animate-pulse">
+                      System_Phase_Live
+                    </div>
                   </div>
 
                   <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-6">
@@ -170,14 +167,14 @@ const Process = () => {
                     </div>
 
                     <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
-                       <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
-                          <ShieldCheck className="text-brand-primary mb-2 transition-transform group-hover/card:scale-110" size={18} />
-                          <div className="text-[8px] font-black text-white uppercase tracking-widest">Arch Audit</div>
-                       </div>
-                       <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
-                          <Zap className="text-fuchsia-400 mb-2 transition-transform group-hover/card:scale-110" size={18} />
-                          <div className="text-[8px] font-black text-white uppercase tracking-widest">Efficiency</div>
-                       </div>
+                      <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
+                        <ShieldCheck className="text-brand-primary mb-2 transition-transform group-hover/card:scale-110" size={18} />
+                        <div className="text-[8px] font-black text-white uppercase tracking-widest">Arch Audit</div>
+                      </div>
+                      <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
+                        <Zap className="text-fuchsia-400 mb-2 transition-transform group-hover/card:scale-110" size={18} />
+                        <div className="text-[8px] font-black text-white uppercase tracking-widest">Efficiency</div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -186,18 +183,18 @@ const Process = () => {
 
             {/* Mobile Navigation Arrows */}
             <div className="flex lg:hidden justify-between mt-8">
-               <button 
-                 onClick={() => setActiveStep(prev => (prev - 1 + steps.length) % steps.length)}
-                 className="flex items-center gap-2 text-[10px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
-               >
-                 <ChevronRight className="rotate-180" size={14} /> Prev Phase
-               </button>
-               <button 
-                 onClick={() => setActiveStep(prev => (prev + 1) % steps.length)}
-                 className="flex items-center gap-2 text-[10px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
-               >
-                 Next Phase <ChevronRight size={14} />
-               </button>
+              <button
+                onClick={() => setActiveStep(prev => (prev - 1 + steps.length) % steps.length)}
+                className="flex items-center gap-2 text-[12px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
+              >
+                <ChevronRight className="rotate-180" size={14} /> Prev Phase
+              </button>
+              <button
+                onClick={() => setActiveStep(prev => (prev + 1) % steps.length)}
+                className="flex items-center gap-2 text-[12px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
+              >
+                Next Phase <ChevronRight size={14} />
+              </button>
             </div>
           </div>
         </div>

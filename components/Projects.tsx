@@ -247,7 +247,7 @@ const Projects = () => {
 
                   <Link
                     href={`/work/${cases[currentIndex].slug}`}
-                    className="inline-flex items-center gap-4 text-white font-black text-[10px] uppercase tracking-[0.3em] hover:text-brand-primary transition-all group pt-6"
+                    className="inline-flex items-center gap-4 text-white font-black text-[12px] uppercase tracking-[0.3em] hover:text-brand-primary transition-all group pt-6"
                   >
                     View Operational Data
                     <ExternalLink size={14} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 text-brand-primary" />

@@ -179,7 +179,7 @@ export default function ChatbotUI() {
                                         <button
                                             key={i}
                                             onClick={() => handleSend(q)}
-                                            className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-[10px] font-bold text-white/70 hover:bg-brand-primary hover:text-bg-dark hover:border-brand-primary transition-all text-left"
+                                            className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-[12px] font-bold text-white/70 hover:bg-brand-primary hover:text-bg-dark hover:border-brand-primary transition-all text-left"
                                         >
                                             {q}
                                         </button>
@@ -201,7 +201,7 @@ export default function ChatbotUI() {
                                     href={action.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-white/5 border border-white/5 text-[8px] font-bold text-white/50 hover:text-white hover:bg-white/10 hover:border-brand-primary/30 transition-all whitespace-nowrap uppercase tracking-wider"
+                                    className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-white/50 hover:text-white hover:bg-white/10 hover:border-brand-primary/30 transition-all whitespace-nowrap uppercase tracking-wider"
                                 >
                                     {action.icon}
                                     {action.label}

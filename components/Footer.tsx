@@ -94,8 +94,8 @@ const Footer = () => {
             © {currentYear} XenotriX Engineering. All rights reserved.
           </p>
           <div className="flex gap-6 text-[10px] font-medium uppercase tracking-widest opacity-40">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

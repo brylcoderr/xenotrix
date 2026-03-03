@@ -27,37 +27,36 @@ const Navigation = () => {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'py-4 bg-bg-dark/60 backdrop-blur-2xl border-b border-white/5 shadow-2xl' 
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+          ? 'py-4 bg-bg-dark/60 backdrop-blur-2xl border-b border-white/5 shadow-2xl'
           : 'py-8 bg-transparent'
-      }`}
+        }`}
     >
       <div className="section-container">
         <div className="flex items-center justify-between">
-          
+
           {/* Brand Engine - Professional Identity */}
           <Link href="/" className="flex items-center gap-4 group">
-             <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-500">
-                <Image 
-                  src="/images/logo.png" 
-                  alt="XenotriX" 
-                  fill
-                  className="object-contain"
-                />
-             </div>
-             <div className="flex flex-col">
-               <span className="text-lg font-bold tracking-tight text-white leading-none uppercase">XenotriX</span>
-               <span className="text-[7px] font-black tracking-[0.4em] text-brand-primary uppercase leading-none mt-1">Digital Engineering</span>
-             </div>
+            <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-500">
+              <Image
+                src="/images/logo.png"
+                alt="XenotriX"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold tracking-tight text-white leading-none uppercase">XenotriX</span>
+              <span className="text-[7px] font-black tracking-[0.4em] text-brand-primary uppercase leading-none mt-1">Digital Engineering</span>
+            </div>
           </Link>
 
           {/* Core Navigation - Professional Density */}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
+              <Link
+                key={link.name}
                 href={link.href}
                 className="text-[10px] font-bold text-white/40 hover:text-white uppercase tracking-[0.2em] transition-all relative group py-2"
               >
@@ -69,16 +68,16 @@ const Navigation = () => {
 
           {/* Operational CTA - Modern Professional */}
           <div className="hidden lg:flex items-center gap-8">
-            <Link 
-              href="#contact" 
-              className="px-8 py-3 rounded-full bg-brand-primary text-bg-dark text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-bg-dark transition-all transform hover:scale-105 shadow-lg shadow-brand-primary/20"
+            <Link
+              href="#contact"
+              className="px-8 py-3 rounded-full bg-brand-primary text-bg-dark text-[12px] font-black uppercase tracking-widest hover:bg-white hover:text-bg-dark transition-all transform hover:scale-105 shadow-lg shadow-brand-primary/20"
             >
               Initiate Project
             </Link>
           </div>
 
           {/* Mobile Access */}
-          <button 
+          <button
             className="lg:hidden text-white p-2 hover:bg-white/5 rounded-xl transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -98,8 +97,8 @@ const Navigation = () => {
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
+                <Link
+                  key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-xl font-bold text-white hover:text-brand-primary transition-colors"
@@ -107,16 +106,16 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link 
-                href="#contact" 
+              <Link
+                href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 px-8 py-4 rounded-xl bg-brand-primary text-bg-dark text-center font-black uppercase tracking-widest text-xs"
               >
                 Contact Us
               </Link>
             </div>
-            
-            <button 
+
+            <button
               className="absolute top-8 right-8 text-white p-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
