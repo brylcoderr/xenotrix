@@ -83,7 +83,7 @@ export default function ChatbotUI() {
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0, opacity: 0 }}
                         onClick={() => setIsOpen(true)}
-                        className="w-16 h-16 rounded-full bg-brand-primary text-bg-dark flex items-center justify-center shadow-2xl shadow-brand-primary/20 hover:scale-110 transition-transform group"
+                        className="w-16 h-16 rounded-full bg-brand-primary text-white flex items-center justify-center shadow-2xl shadow-brand-primary/20 hover:scale-110 transition-transform group"
                     >
                         <MessageSquare size={28} className="group-hover:rotate-12 transition-transform" />
                     </motion.button>
