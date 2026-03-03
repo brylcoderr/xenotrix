@@ -61,13 +61,13 @@ const WhyXenotrix = () => {
       icon: <Users className="w-10 h-10" />,
       count: counts.customers,
       label: 'Elite Partners',
-      color: 'fuchsia-500',
+      color: 'brand-secondary',
     },
     {
       icon: <Globe className="w-10 h-10" />,
       count: counts.countries,
       label: 'Global Node Reach',
-      color: 'violet-400',
+      color: 'brand-primary',
     },
   ];
 
@@ -137,7 +137,7 @@ const WhyXenotrix = () => {
                 <p className="text-[10px] font-black text-brand-primary uppercase tracking-[0.4em] mb-4">
                   {stat.label}
                 </p>
-                
+
                 <div className="text-[10px] text-text-dim/40 font-bold italic tracking-widest uppercase">Verified Deployment</div>
               </div>
             </motion.div>
@@ -151,34 +151,34 @@ const WhyXenotrix = () => {
           transition={{ delay: 0.8 }}
           className="mt-24 max-w-2xl mx-auto p-10 rounded-4xl border border-white/10 bg-bg-dark/80 backdrop-blur-3xl shadow-2xl relative group"
         >
-           <div className="absolute -top-3 left-10 px-4 py-1 bg-brand-primary text-bg-dark text-[8px] font-black uppercase tracking-[0.4em] rounded-full">System_Manifest</div>
-           
-           <div className="flex flex-col gap-3 font-mono text-[11px] tracking-tight">
-             <div className="flex gap-4">
-               <span className="text-brand-primary opacity-40">01</span>
-               <span className="text-text-dim">const achievements = &#123;</span>
-             </div>
-             <div className="flex gap-4 ml-6">
-               <span className="text-brand-primary opacity-40">02</span>
-               <span className="text-text-dim">projects: <span className="text-brand-primary">{counts.projects}+</span>,</span>
-             </div>
-             <div className="flex gap-4 ml-6">
-               <span className="text-brand-primary opacity-40">03</span>
-               <span className="text-text-dim">partners: <span className="text-fuchsia-400">{counts.customers}+</span>,</span>
-             </div>
-             <div className="flex gap-4 ml-6">
-               <span className="text-brand-primary opacity-40">04</span>
-               <span className="text-text-dim">reach: <span className="text-violet-500">&apos;GLOBAL_{counts.countries}&apos;</span>,</span>
-             </div>
-             <div className="flex gap-4 ml-6">
-               <span className="text-brand-primary opacity-40">05</span>
-               <span className="text-text-dim">uptime: <span className="text-brand-primary">&apos;99.99%&apos;</span></span>
-             </div>
-             <div className="flex gap-4">
-               <span className="text-brand-primary opacity-40">06</span>
-               <span className="text-text-dim">&#125;;</span>
-             </div>
-           </div>
+          <div className="absolute -top-3 left-10 px-4 py-1 bg-brand-primary text-bg-dark text-[8px] font-black uppercase tracking-[0.4em] rounded-full">System_Manifest</div>
+
+          <div className="flex flex-col gap-3 font-mono text-[11px] tracking-tight">
+            <div className="flex gap-4">
+              <span className="text-brand-primary opacity-40">01</span>
+              <span className="text-text-dim">const achievements = &#123;</span>
+            </div>
+            <div className="flex gap-4 ml-6">
+              <span className="text-brand-primary opacity-40">02</span>
+              <span className="text-text-dim">projects: <span className="text-brand-primary">{counts.projects}+</span>,</span>
+            </div>
+            <div className="flex gap-4 ml-6">
+              <span className="text-brand-primary opacity-40">03</span>
+              <span className="text-text-dim">partners: <span className="text-brand-primary">{counts.customers}+</span>,</span>
+            </div>
+            <div className="flex gap-4 ml-6">
+              <span className="text-brand-primary opacity-40">04</span>
+              <span className="text-text-dim">reach: <span className="text-brand-secondary">&apos;GLOBAL_{counts.countries}&apos;</span>,</span>
+            </div>
+            <div className="flex gap-4 ml-6">
+              <span className="text-brand-primary opacity-40">05</span>
+              <span className="text-text-dim">uptime: <span className="text-brand-primary">&apos;99.99%&apos;</span></span>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-brand-primary opacity-40">06</span>
+              <span className="text-text-dim">&#125;;</span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

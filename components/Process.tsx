@@ -61,7 +61,7 @@ const Process = () => {
             <span className="tag">Our Methodology</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
               The Lifecycle of <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">The Lifecycle of <br /> Architectural Excellence.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary via-white to-brand-primary/40 animate-gradient">The Lifecycle of <br /> Architectural Excellence.</span>
             </h2>
             <p className="text-lg text-text-dim leading-tight mb-10 font-medium opacity-80 max-w-md">
               A condensed, high-performance workflow designed for mission-critical digital scaling.
@@ -74,13 +74,13 @@ const Process = () => {
                   key={step.id}
                   onClick={() => setActiveStep(i)}
                   className={`w-full flex items-center gap-5 p-5 rounded-4xl transition-all duration-500 border group ${activeStep === i
-                      ? 'bg-white/5 border-white/10 shadow-2xl shadow-brand-primary/10'
-                      : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
+                    ? 'bg-white/5 border-white/10 shadow-2xl shadow-brand-primary/10'
+                    : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
                     }`}
                 >
                   <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-500 ${activeStep === i
-                      ? `bg-linear-to-r ${step.color.replace('/20', '')} text-bg-dark scale-110 shadow-lg`
-                      : 'bg-white/5 text-white/40'
+                    ? `bg-linear-to-r ${step.color.replace('/20', '')} text-bg-dark scale-110 shadow-lg`
+                    : 'bg-white/5 text-white/40'
                     }`}>
                     {step.icon}
                   </div>

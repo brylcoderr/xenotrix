@@ -17,8 +17,8 @@ const Hero = () => {
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-linear-to-b from-bg-dark via-bg-dark/60 to-bg-dark z-10" />
         <div className="absolute inset-0 bg-linear-to-r from-bg-dark via-transparent to-bg-dark z-10 opacity-60" />
-        <Image 
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000" 
+        <Image
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
           alt="Global Digital Infrastructure"
           fill
           priority
@@ -26,9 +26,9 @@ const Hero = () => {
         />
         {/* Animated Light Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px] animate-pulse delay-700" />
       </motion.div>
-      
+
       {/* Premium Content Architecture */}
       <div className="section-container relative z-20 flex-1 flex flex-col justify-center">
         <div className="max-w-6xl">
@@ -45,25 +45,25 @@ const Hero = () => {
                 Enterprise Standard : 2026
               </div>
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl lg:text-[110px] font-bold tracking-tighter leading-[0.8] mb-14 text-white">
               Architecting <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Future Systems.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary via-white to-brand-primary/40 animate-gradient">Future Systems.</span>
             </h1>
-            
+
             <p className="text-lg md:text-2xl text-text-dim max-w-3xl mb-16 leading-tight font-medium opacity-80 italic">
               Deploying high-performance digital ecosystems for global organizations that demand absolute architectural integrity and scale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center">
               <Link href="#contact" className="btn-primary group relative overflow-hidden">
-                <span className="relative z-10 text-bg-dark">Initiate Partnership</span>
-                <div className="absolute inset-0 bg-linear-to-r from-violet-500 to-fuchsia-500 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-                <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform text-bg-dark" />
+                <span className="relative z-10 text-white">Initiate Partnership</span>
+                <div className="absolute inset-0 bg-linear-to-r from-brand-secondary to-brand-primary translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform text-white" />
               </Link>
               <Link href="#work" className="btn-secondary group">
                 <span className="opacity-60 group-hover:opacity-100 transition-opacity uppercase text-xs tracking-widest font-black">View Mission Archive</span>
-                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-bg-dark transition-all">
+                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-brand-primary transition-all">
                   <ChevronRight size={18} />
                 </div>
               </Link>
@@ -73,7 +73,7 @@ const Hero = () => {
       </div>
 
       {/* Trust Badge / Stats - Integrated Flow */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -93,15 +93,15 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="flex items-center gap-5 bg-white/2 px-8 py-6 rounded-4xl border border-white/5 backdrop-blur-sm group hover:border-brand-primary/20 transition-all">
-               <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0 group-hover:bg-brand-primary group-hover:text-bg-dark transition-all duration-500">
-                  <CheckCircle2 size={24} />
-               </div>
-               <div>
-                  <div className="text-xs uppercase tracking-[0.2em] font-black text-brand-primary mb-1">ISO 9001 : 2015</div>
-                  <div className="text-sm font-bold text-white/40 group-hover:text-white/60 transition-colors">Elite Quality Certification</div>
-               </div>
+              <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0 group-hover:bg-brand-primary group-hover:text-bg-dark transition-all duration-500">
+                <CheckCircle2 size={24} />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em] font-black text-brand-primary mb-1">ISO 9001 : 2015</div>
+                <div className="text-sm font-bold text-white/40 group-hover:text-white/60 transition-colors">Elite Quality Certification</div>
+              </div>
             </div>
           </div>
         </div>

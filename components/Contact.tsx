@@ -145,7 +145,7 @@ const Contact = () => {
                         <p className="text-text-dim max-w-sm mb-10 font-medium">Your mission briefing has been successfully encrypted and logged. Our engineering leads will review the parameters and establish a bridge within 12-24 cycles.</p>
                         <button
                           onClick={() => setStatus('idle')}
-                          className="px-10 py-4 rounded-2xl bg-white/5 border border-white/10 text-[12px] font-black uppercase tracking-[0.3em] text-white hover:bg-white hover:text-bg-dark transition-all"
+                          className="px-10 py-4 rounded-2xl bg-white/5 border border-white/10 text-[12px] font-black uppercase tracking-[0.3em] text-white hover:bg-white hover:text-brand-primary transition-all"
                         >
                           Open New Terminal
                         </button>
@@ -252,7 +252,7 @@ const Contact = () => {
                             >
                               <div className="absolute inset-0 bg-linear-to-r from-brand-primary to-violet-600 rounded-2xl" />
                               <div className="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 rounded-2xl" />
-                              <div className="relative z-10 py-6 flex items-center justify-center gap-4 text-[12px] font-black uppercase tracking-[0.4em] text-bg-dark group-hover/btn:text-bg-dark transition-colors">
+                              <div className="relative z-10 py-6 flex items-center justify-center gap-4 text-[12px] font-black uppercase tracking-[0.4em] text-white group-hover/btn:text-brand-primary transition-colors">
                                 {status === 'submitting' ? 'Transmitting Data...' : 'Initiate Protocol'}
                                 <Send size={18} className={`${status === 'submitting' ? 'animate-ping' : 'group-hover/btn:-rotate-12'} transition-transform`} />
                               </div>

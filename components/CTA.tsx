@@ -57,7 +57,7 @@ const CTA = () => {
 
             <div className="mt-16 flex items-center gap-8 text-xs font-mono text-text-dim">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
+                <div className="w-2 h-2 rounded-full bg-brand-primary animate-pulse" />
                 SLOTS AVAILABLE FOR Q1 2026
               </div>
               <div className="hidden sm:block h-4 w-px bg-white/10" />

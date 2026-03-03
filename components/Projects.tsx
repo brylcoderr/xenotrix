@@ -92,7 +92,7 @@ const Projects = () => {
       tags: ["HIPAA-Compliant", "E2EE", "Telemetry"],
       results: "99.99% Sync Rate",
       impact: "Accelerated Research",
-      icon: <Target className="text-fuchsia-400" size={18} />
+      icon: <Target className="text-brand-primary" size={18} />
     },
     {
       title: "Universal E-Commerce Architecture",
@@ -104,7 +104,7 @@ const Projects = () => {
       tags: ["Serverless", "Scaling", "Retail"],
       results: "Zero-Downtime Peak",
       impact: "Record Q4 Revenue",
-      icon: <ShieldCheck className="text-violet-400" size={18} />
+      icon: <ShieldCheck className="text-brand-primary" size={18} />
     },
     {
       title: "OmniHealth Dental Ecosystem",
@@ -116,7 +116,7 @@ const Projects = () => {
       tags: ["Medical-Tech", "Scheduling", "Workflow"],
       results: "85% Staff Efficiency",
       impact: "15k+ Active Portals",
-      icon: <Target className="text-violet-400" size={18} />
+      icon: <Target className="text-brand-primary" size={18} />
     },
     {
       title: "PulseFlow Fitness Protocol",
@@ -128,7 +128,7 @@ const Projects = () => {
       tags: ["Real-Time", "Mobile-Native", "Community"],
       results: "3.5x Engagement",
       impact: "18% DAU Floor",
-      icon: <Sparkles className="text-violet-400" size={18} />
+      icon: <Sparkles className="text-brand-primary" size={18} />
     },
     {
       title: "AI Technical Landing Interface",
@@ -140,7 +140,7 @@ const Projects = () => {
       tags: ["Interactive", "Technical SEO", "AI"],
       results: "+120% Conversion",
       impact: "Production Ready",
-      icon: <Target className="text-fuchsia-400" size={18} />
+      icon: <Target className="text-brand-primary" size={18} />
     },
     {
       title: "Photography Studio Banner",
@@ -152,7 +152,7 @@ const Projects = () => {
       tags: ["Asset-Optimized", "Portfolio", "Lighthouse"],
       results: "100/100 Lighthouse",
       impact: "SEO Perfection",
-      icon: <Sparkles className="text-violet-400" size={18} />
+      icon: <Sparkles className="text-brand-primary" size={18} />
     }
   ];
 
@@ -172,7 +172,7 @@ const Projects = () => {
             <span className="tag">Signature Missions</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-[0.9] text-white">
               Elite Case <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Studies.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary via-white to-brand-primary/40 animate-gradient">Studies.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-dim leading-relaxed font-medium">
               A track record of absolute clinical execution in high-stakes digital environments.

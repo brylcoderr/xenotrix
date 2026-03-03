@@ -36,7 +36,7 @@ const Footer = () => {
                   key={i}
                   href={social.href}
                   target="_blank"
-                  className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white/30 hover:bg-brand-primary hover:text-bg-dark transition-all transform hover:scale-110"
+                  className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white/30 hover:bg-brand-primary hover:text-white transition-all transform hover:scale-110"
                 >
                   {social.icon}
                 </Link>

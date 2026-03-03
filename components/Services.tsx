@@ -10,42 +10,42 @@ const Services = () => {
       title: "Enterprise Web Systems",
       desc: "We construct robust, high-availability web ecosystems using next-generation architectural patterns for mission-critical performance.",
       metrics: "Load Time: < 0.8s",
-      color: "from-violet-500/20 to-fuchsia-500/20"
+      color: "from-brand-primary/20 to-brand-secondary/20"
     },
     {
       icon: <Smartphone size={28} />,
       title: "Native Mobile Infrastructure",
       desc: "Engineered for elite user engagement. We build seamless, high-performance mobile products that dominate their market sector.",
       metrics: "Crash-Free Rate: 99.9%",
-      color: "from-fuchsia-500/20 to-violet-600/20"
+      color: "from-brand-secondary/20 to-brand-primary/20"
     },
     {
       icon: <Cpu size={28} />,
       title: "Advanced AI & Neural Logic",
       desc: "Deployment of custom LLM pipelines and predictive neural networks to automate complex operations and unlock strategic foresight.",
       metrics: "Inference Latency: < 20ms",
-      color: "from-violet-600/20 to-purple-500/20"
+      color: "from-brand-primary/20 to-brand-secondary/40"
     },
     {
       icon: <Cloud size={28} />,
       title: "Elastic Cloud Orchestration",
       desc: "Multi-region cloud infrastructure designed for absolute resilience, zero-downtime scaling, and global edge delivery.",
       metrics: "Availability: 99.99%",
-      color: "from-purple-500/20 to-fuchsia-400/20"
+      color: "from-brand-secondary/40 to-brand-primary/20"
     },
     {
       icon: <ShieldCheck size={28} />,
       title: "Hardened Cyber Security",
       desc: "Clinical security audits and architectural hardening to ensure your digital ecosystem remains impenetrable and compliant.",
       metrics: "Threat Level: Neutralized",
-      color: "from-fuchsia-400/20 to-violet-500/20"
+      color: "from-brand-primary/10 to-brand-secondary/30"
     },
     {
       icon: <BarChart size={28} />,
       title: "Strategic Growth Engineering",
       desc: "Data-driven optimization protocols that leverage advanced analytics to scale your engagement and compound business value.",
       metrics: "Avg ROI Yield: 12X",
-      color: "from-violet-500/20 to-indigo-500/20"
+      color: "from-brand-secondary/10 to-brand-primary/30"
     }
   ];
 
@@ -54,14 +54,14 @@ const Services = () => {
       {/* Cinematic Background Engine */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-primary/5 rounded-full blur-[150px] opacity-20" />
-      
+
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-12 gap-20 items-end mb-24">
           <div className="lg:col-span-8">
             <span className="tag">Our Capabilities</span>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
               Hardened <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-600 animate-gradient">Digital Solutions.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary via-white to-brand-primary/40 animate-gradient">Digital Solutions.</span>
             </h2>
             <p className="text-lg md:text-xl text-text-dim leading-tight max-w-xl font-medium opacity-80">
               We provide the architectural foundation for the world&apos;s most ambitious digital products, engineered for absolute scale and reliability.
@@ -69,16 +69,16 @@ const Services = () => {
           </div>
           <div className="lg:col-span-4 flex lg:justify-end">
             <div className="relative group">
-               <div className="absolute inset-0 bg-brand-primary/20 rounded-4xl blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-20" />
-               <div className="relative flex items-center gap-6 p-6 rounded-4xl bg-white/2 border border-white/10 backdrop-blur-3xl">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
-                    <Activity size={24} className="animate-pulse" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-1">Status: Active</div>
-                    <div className="text-base font-bold text-white tracking-tight">System_Ready_v2.0</div>
-                  </div>
-               </div>
+              <div className="absolute inset-0 bg-brand-primary/20 rounded-4xl blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-20" />
+              <div className="relative flex items-center gap-6 p-6 rounded-4xl bg-white/2 border border-white/10 backdrop-blur-3xl">
+                <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                  <Activity size={24} className="animate-pulse" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-black uppercase tracking-[0.3em] text-brand-primary mb-1">Status: Active</div>
+                  <div className="text-base font-bold text-white tracking-tight">System_Ready_v2.0</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -109,25 +109,25 @@ const Services = () => {
                       </p>
                     </div>
                     <div className="relative z-10 pt-6 border-t border-white/5 flex items-center justify-between mt-auto">
-                       <div>
-                          <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary/40 mb-2 flex items-center gap-2">
-                             <Target size={12} />
-                             Operational Yield
-                          </div>
-                          <div className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2">
-                             <div className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
-                             {service.metrics}
-                          </div>
-                       </div>
-                       <div className="w-10 h-10 rounded-full bg-white/2 border border-white/5 flex items-center justify-center text-white/10">
-                          <ChevronRight size={20} />
-                       </div>
+                      <div>
+                        <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary/40 mb-2 flex items-center gap-2">
+                          <Target size={12} />
+                          Operational Yield
+                        </div>
+                        <div className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
+                          {service.metrics}
+                        </div>
+                      </div>
+                      <div className="w-10 h-10 rounded-full bg-white/2 border border-white/5 flex items-center justify-center text-white/10">
+                        <ChevronRight size={20} />
+                      </div>
                     </div>
                   </motion.div>
                 </div>
               ))}
             </div>
-            
+
             {/* Scroll Indicator */}
             <div className="flex justify-center gap-2 mt-4">
               {services.map((_, i) => (
@@ -150,35 +150,35 @@ const Services = () => {
                 {/* Dynamic Aura Background */}
                 <div className={`absolute inset-0 bg-linear-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/2 rounded-full blur-3xl group-hover:bg-brand-primary/5 transition-colors duration-700" />
-                
+
                 <div className="relative z-10 flex-1">
                   <div className="w-16 h-16 rounded-4xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-10 shadow-2xl group-hover:bg-brand-primary group-hover:text-bg-dark group-hover:scale-110 group-hover:rotate-6 transition-all duration-700">
                     {service.icon}
                   </div>
-                  
+
                   <h3 className="text-2xl md:text-2xl font-bold mb-4 tracking-tighter text-white group-hover:text-brand-primary transition-colors duration-500">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-base text-text-dim leading-snug font-medium mb-10 group-hover:text-white/80 transition-colors duration-500">
                     {service.desc}
                   </p>
                 </div>
-  
+
                 <div className="relative z-10 pt-8 border-t border-white/5 flex items-center justify-between">
-                   <div>
-                      <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary/40 mb-2 flex items-center gap-2">
-                         <Target size={12} />
-                         Operational Yield
-                      </div>
-                      <div className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-primary transition-colors">
-                         <div className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
-                         {service.metrics}
-                      </div>
-                   </div>
-                   <div className="w-10 h-10 rounded-full bg-white/2 border border-white/5 flex items-center justify-center text-white/10 group-hover:text-brand-primary group-hover:border-brand-primary/50 group-hover:bg-brand-primary/10 transition-all duration-500">
-                      <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                   </div>
+                  <div>
+                    <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary/40 mb-2 flex items-center gap-2">
+                      <Target size={12} />
+                      Operational Yield
+                    </div>
+                    <div className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-primary transition-colors">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
+                      {service.metrics}
+                    </div>
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-white/2 border border-white/5 flex items-center justify-center text-white/10 group-hover:text-brand-primary group-hover:border-brand-primary/50 group-hover:bg-brand-primary/10 transition-all duration-500">
+                    <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </motion.div>
             ))}

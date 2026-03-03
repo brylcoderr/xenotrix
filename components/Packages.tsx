@@ -88,7 +88,7 @@ const Packages = () => {
                     <div className={`absolute inset-0 bg-linear-to-br ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
 
                     {plan.popular && (
-                      <div className="absolute top-4 right-4 py-1.5 px-4 rounded-full bg-linear-to-r from-brand-primary to-violet-600 text-[8px] font-black uppercase tracking-[0.3em] text-bg-dark shadow-2xl flex items-center gap-2">
+                      <div className="absolute top-4 right-4 py-1.5 px-4 rounded-full bg-linear-to-r from-brand-primary to-brand-secondary text-[8px] font-black uppercase tracking-[0.3em] text-white shadow-2xl flex items-center gap-2">
                         <Activity size={8} className="animate-pulse" />
                         Primary Protocol
                       </div>
@@ -96,8 +96,8 @@ const Packages = () => {
 
                     <div className="relative z-10 mb-8">
                       <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-2xl transition-all duration-700 ${plan.popular
-                          ? 'bg-brand-primary text-bg-dark'
-                          : 'bg-white/5 border border-white/10 text-white'
+                        ? 'bg-brand-primary text-white'
+                        : 'bg-white/5 border border-white/10 text-white'
                         }`}>
                         {plan.icon}
                       </div>
@@ -133,8 +133,8 @@ const Packages = () => {
                       <Link
                         href="#contact"
                         className={`w-full py-4 rounded-xl font-black text-[8px] tracking-[0.3em] uppercase transition-all flex items-center justify-center gap-2 ${plan.popular
-                            ? 'bg-white text-bg-dark'
-                            : 'bg-white/5 text-white border border-white/10'
+                          ? 'bg-white text-brand-primary hover:bg-brand-primary hover:text-white'
+                          : 'bg-white/5 text-white border border-white/10'
                           }`}
                       >
                         <Lock size={10} className="opacity-40" />
@@ -171,7 +171,7 @@ const Packages = () => {
                 <div className={`absolute inset-0 bg-linear-to-br ${plan.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
 
                 {plan.popular && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 py-2 px-6 rounded-full bg-linear-to-r from-brand-primary to-violet-600 text-[10px] font-black uppercase tracking-[0.4em] text-bg-dark shadow-2xl flex items-center gap-3">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 py-2 px-6 rounded-full bg-linear-to-r from-brand-primary to-brand-secondary text-[10px] font-black uppercase tracking-[0.4em] text-white shadow-2xl flex items-center gap-3">
                     <Activity size={10} className="animate-pulse" />
                     Primary Protocol
                   </div>
@@ -179,8 +179,8 @@ const Packages = () => {
 
                 <div className="relative z-10 mb-10">
                   <div className={`w-16 h-16 rounded-4xl flex items-center justify-center mb-10 shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 ${plan.popular
-                      ? 'bg-brand-primary text-bg-dark'
-                      : 'bg-white/5 border border-white/10 text-white'
+                    ? 'bg-brand-primary text-white'
+                    : 'bg-white/5 border border-white/10 text-white'
                     }`}>
                     {plan.icon}
                   </div>
@@ -216,8 +216,8 @@ const Packages = () => {
                   <Link
                     href="#contact"
                     className={`w-full py-5 rounded-2xl font-black text-[12px] tracking-[0.3em] uppercase transition-all flex items-center justify-center gap-3 group/btn ${plan.popular
-                        ? 'bg-white text-bg-dark hover:bg-brand-primary hover:text-bg-dark'
-                        : 'bg-white/5 text-white hover:bg-white hover:text-bg-dark border border-white/10'
+                      ? 'bg-white text-brand-primary hover:bg-brand-primary hover:text-white'
+                      : 'bg-white/5 text-white hover:bg-white hover:text-brand-primary border border-white/10'
                       }`}
                   >
                     <Lock size={12} className="opacity-40" />

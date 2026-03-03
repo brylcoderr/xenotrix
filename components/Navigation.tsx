@@ -29,8 +29,8 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? 'py-4 bg-bg-dark/60 backdrop-blur-2xl border-b border-white/5 shadow-2xl'
-          : 'py-8 bg-transparent'
+        ? 'py-4 bg-bg-dark/60 backdrop-blur-2xl border-b border-white/5 shadow-2xl'
+        : 'py-8 bg-transparent'
         }`}
     >
       <div className="section-container">
@@ -70,7 +70,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center gap-8">
             <Link
               href="#contact"
-              className="px-8 py-3 rounded-full bg-brand-primary text-bg-dark text-[12px] font-black uppercase tracking-widest hover:bg-white hover:text-bg-dark transition-all transform hover:scale-105 shadow-lg shadow-brand-primary/20"
+              className="px-8 py-3 rounded-full bg-brand-primary text-white text-[12px] font-black uppercase tracking-widest hover:bg-white hover:text-brand-primary transition-all transform hover:scale-105 shadow-lg shadow-brand-primary/20"
             >
               Initiate Project
             </Link>

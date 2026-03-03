@@ -179,7 +179,7 @@ export default function ChatbotUI() {
                                         <button
                                             key={i}
                                             onClick={() => handleSend(q)}
-                                            className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-[12px] font-bold text-white/70 hover:bg-brand-primary hover:text-bg-dark hover:border-brand-primary transition-all text-left"
+                                            className="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-[12px] font-bold text-white/70 hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all text-left"
                                         >
                                             {q}
                                         </button>
