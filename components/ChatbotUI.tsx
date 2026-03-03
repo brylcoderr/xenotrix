@@ -223,7 +223,7 @@ export default function ChatbotUI() {
                                 <button
                                     onClick={() => handleSend()}
                                     disabled={isLoading || !input.trim()}
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-brand-primary text-bg-dark flex items-center justify-center hover:scale-105 transition-transform disabled:opacity-50 disabled:hover:scale-100 shadow-lg shadow-brand-primary/20"
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center hover:scale-105 transition-transform disabled:opacity-50 disabled:hover:scale-100 shadow-lg shadow-brand-primary/20"
                                 >
                                     <Send size={18} />
                                 </button>

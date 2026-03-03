@@ -109,7 +109,7 @@ const Navigation = () => {
               <Link
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-4 px-8 py-4 rounded-xl bg-brand-primary text-bg-dark text-center font-black uppercase tracking-widest text-xs"
+                className="mt-4 px-8 py-4 rounded-xl bg-brand-primary text-white text-center font-black uppercase tracking-widest text-xs"
               >
                 Contact Us
               </Link>

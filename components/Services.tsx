@@ -98,7 +98,7 @@ const Services = () => {
                   >
                     <div className={`absolute inset-0 bg-linear-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />
                     <div className="relative z-10 flex-1">
-                      <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-8 shadow-2xl group-hover:bg-brand-primary group-hover:text-bg-dark transition-all duration-700">
+                      <div className="w-14 h-14 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-8 shadow-2xl group-hover:bg-brand-primary group-hover:text-white transition-all duration-700">
                         {service.icon}
                       </div>
                       <h3 className="text-xl font-bold mb-4 tracking-tighter text-white group-hover:text-brand-primary transition-colors duration-500">
@@ -152,7 +152,7 @@ const Services = () => {
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/2 rounded-full blur-3xl group-hover:bg-brand-primary/5 transition-colors duration-700" />
 
                 <div className="relative z-10 flex-1">
-                  <div className="w-16 h-16 rounded-4xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-10 shadow-2xl group-hover:bg-brand-primary group-hover:text-bg-dark group-hover:scale-110 group-hover:rotate-6 transition-all duration-700">
+                  <div className="w-16 h-16 rounded-4xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-10 shadow-2xl group-hover:bg-brand-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-700">
                     {service.icon}
                   </div>
 

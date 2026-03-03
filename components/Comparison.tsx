@@ -44,7 +44,7 @@ const Comparison = () => {
                   <div className="premium-card p-10 border-brand-primary/30 bg-brand-primary/5">
                      <div className="flex justify-between items-center mb-10 pb-4 border-b border-white/10">
                         <h3 className="text-[10px] font-black text-brand-primary uppercase tracking-[0.3em]">XenotriX Engineering</h3>
-                        <span className="text-[9px] font-black py-1 px-3 bg-brand-primary text-bg-dark rounded-full">GOLD STANDARD</span>
+                        <span className="text-[9px] font-black py-1 px-3 bg-brand-primary text-white rounded-full">GOLD STANDARD</span>
                      </div>
                      <div className="space-y-8">
                         <div className="flex gap-4 group">

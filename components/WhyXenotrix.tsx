@@ -151,7 +151,7 @@ const WhyXenotrix = () => {
           transition={{ delay: 0.8 }}
           className="mt-24 max-w-2xl mx-auto p-10 rounded-4xl border border-white/10 bg-bg-dark/80 backdrop-blur-3xl shadow-2xl relative group"
         >
-          <div className="absolute -top-3 left-10 px-4 py-1 bg-brand-primary text-bg-dark text-[8px] font-black uppercase tracking-[0.4em] rounded-full">System_Manifest</div>
+          <div className="absolute -top-3 left-10 px-4 py-1 bg-brand-primary text-white text-[8px] font-black uppercase tracking-[0.4em] rounded-full">System_Manifest</div>
 
           <div className="flex flex-col gap-3 font-mono text-[11px] tracking-tight">
             <div className="flex gap-4">

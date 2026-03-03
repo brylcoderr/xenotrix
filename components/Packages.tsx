@@ -25,7 +25,7 @@ const Packages = () => {
       tagline: "Mission-critical product teams",
       price: "Retainer",
       popular: true,
-      icon: <Zap className="text-bg-dark" size={24} />,
+      icon: <Zap className="text-white" size={24} />,
       features: [
         "Dedicated Engineering Squad",
         "Architectural Oversight Protocol",
@@ -204,7 +204,7 @@ const Packages = () => {
                 <div className="relative z-10 space-y-6 mb-12 flex-1">
                   {plan.features.map((feature, j) => (
                     <div key={j} className="flex items-start gap-4 group/item cursor-default">
-                      <div className="mt-0.5 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/20 group-hover/item:bg-brand-primary group-hover/item:text-bg-dark group-hover/item:border-brand-primary transition-all duration-500">
+                      <div className="mt-0.5 w-5 h-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/20 group-hover/item:bg-brand-primary group-hover/item:text-white group-hover/item:border-brand-primary transition-all duration-500">
                         <Check size={10} />
                       </div>
                       <span className="text-sm text-text-dim font-medium group-hover/item:text-white transition-colors leading-relaxed">{feature}</span>

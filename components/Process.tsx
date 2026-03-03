@@ -79,7 +79,7 @@ const Process = () => {
                     }`}
                 >
                   <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-500 ${activeStep === i
-                    ? `bg-linear-to-r ${step.color.replace('/20', '')} text-bg-dark scale-110 shadow-lg`
+                    ? `bg-linear-to-r ${step.color.replace('/20', '')} text-white scale-110 shadow-lg`
                     : 'bg-white/5 text-white/40'
                     }`}>
                     {step.icon}

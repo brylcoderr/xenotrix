@@ -45,7 +45,7 @@ const CTA = () => {
                 target="_blank"
                 className="btn-primary group w-full sm:w-auto justify-center"
               >
-                <Clock size={16} className="text-bg-dark" />
+                <Clock size={16} className="text-white" />
                 Initialize Call
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>

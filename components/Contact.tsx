@@ -73,7 +73,7 @@ const Contact = () => {
                   target={item.href?.startsWith('http') ? "_blank" : undefined}
                   className="flex items-center gap-5 p-5 rounded-3xl bg-white/3 border border-white/5 hover:border-brand-primary/30 hover:bg-white/5 transition-all duration-500 group relative overflow-hidden"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-brand-primary group-hover:text-bg-dark group-hover:scale-105 transition-all duration-500">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-brand-primary group-hover:text-white group-hover:scale-105 transition-all duration-500">
                     {item.icon}
                   </div>
                   <div className="flex-1">

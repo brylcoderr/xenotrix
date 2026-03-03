@@ -182,13 +182,13 @@ const Projects = () => {
           <div className="flex gap-4">
             <button
               onClick={prev}
-              className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-bg-dark transition-all duration-500 group"
+              className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-brand-primary transition-all duration-500 group"
             >
               <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             </button>
             <button
               onClick={next}
-              className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-bg-dark transition-all duration-500 group"
+              className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-brand-primary transition-all duration-500 group"
             >
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
