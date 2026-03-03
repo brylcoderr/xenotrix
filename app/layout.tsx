@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   verification: {
     google: 'googlea347b71fda020373',
   },
+  icons: {
+    icon: '/favicon-circle.png',
+    shortcut: '/favicon-circle.png',
+    apple: '/favicon-circle.png',
+  },
 };
 
 export default function RootLayout({

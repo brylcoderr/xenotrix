@@ -2,9 +2,9 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { useRef } from 'react';
+import LightRays from './LightRays';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -13,20 +13,26 @@ const Hero = () => {
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex flex-col pt-24 md:pt-32 pb-8 overflow-hidden bg-bg-dark">
-      {/* Cinematic Background Engine */}
-      <motion.div style={{ y }} className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-linear-to-b from-bg-dark via-bg-dark/60 to-bg-dark z-10" />
-        <div className="absolute inset-0 bg-linear-to-r from-bg-dark via-transparent to-bg-dark z-10 opacity-60" />
-        <Image
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
-          alt="Global Digital Infrastructure"
-          fill
-          priority
-          className="object-cover scale-110 opacity-50 brightness-75"
+      {/* Cinematic Background Engine - Powered by LightRays */}
+      <motion.div style={{ y }} className="absolute inset-0 z-0 pointer-events-none">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={0.5}
+          lightSpread={1.2}
+          rayLength={4}
+          followMouse={false}
+          mouseInfluence={0}
+          noiseAmount={0.2}
+          distortion={0.1}
+          className="absolute inset-0 opacity-100"
+          pulsating
+          fadeDistance={1}
+          saturation={1}
         />
-        {/* Animated Light Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px] animate-pulse delay-700" />
+        {/* Animated Light Orbs - Refined for LightRays integration */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[140px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-secondary/10 rounded-full blur-[140px] animate-pulse delay-700" />
       </motion.div>
 
       {/* Premium Content Architecture */}
@@ -95,7 +101,7 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center gap-5 bg-white/2 px-8 py-6 rounded-4xl border border-white/5 backdrop-blur-sm group hover:border-brand-primary/20 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0 group-hover:bg-brand-primary group-hover:text-bg-dark transition-all duration-500">
+              <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary shrink-0 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500">
                 <CheckCircle2 size={24} />
               </div>
               <div>

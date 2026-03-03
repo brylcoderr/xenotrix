@@ -38,7 +38,7 @@ const Navigation = () => {
 
           {/* Brand Engine - Professional Identity */}
           <Link href="/" className="flex items-center gap-4 group">
-            <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-500">
+            <div className="relative w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-500">
               <Image
                 src="/images/logo.png"
                 alt="XenotriX"
@@ -58,7 +58,7 @@ const Navigation = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[10px] font-bold text-white/40 hover:text-white uppercase tracking-[0.2em] transition-all relative group py-2"
+                className="text-[12px] font-bold text-white uppercase tracking-[0.2em] transition-all relative group py-2"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-brand-primary transition-all duration-300 group-hover:w-full" />

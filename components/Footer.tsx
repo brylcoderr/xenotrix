@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-4 max-w-sm">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-500">
+              <div className="relative w-8 h-8 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-500">
                 <Image
                   src="/images/logo.png"
                   alt="XenotriX"
