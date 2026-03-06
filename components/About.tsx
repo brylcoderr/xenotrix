@@ -6,7 +6,7 @@ import { Award, Globe, CheckCircle2, Shield, Zap, Sparkles } from 'lucide-react'
 
 const About = () => {
   return (
-    <section id="about" className="py-16 md:py-24 relative overflow-hidden bg-bg-dark font-sans">
+    <section id="about" className="py-16 md:py-12 relative overflow-hidden bg-bg-dark font-sans">
       {/* Structural Cinematic Background */}
       <div className="absolute inset-0 bg-grid-white/[0.02] mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[140px] -mr-96 -mt-96 opacity-30" />

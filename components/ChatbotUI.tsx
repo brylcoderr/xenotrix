@@ -12,7 +12,7 @@ interface Message {
 export default function ChatbotUI() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { role: 'assistant', content: 'Protocol initiated. This is the XenotriX Intelligence Node. How can we architect your digital breakthrough today?' }
+        { role: 'assistant', content: "Hello! Welcome to XenotriX. How can we help you grow your business and build your online presence today?" }
     ]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +26,7 @@ export default function ChatbotUI() {
 
     const clearChat = () => {
         setMessages([
-            { role: 'assistant', content: 'Protocol initiated. This is the XenotriX Intelligence Node. How can we architect your digital breakthrough today?' }
+            { role: 'assistant', content: "Hello! Welcome to XenotriX. How can we help you grow your business and build your online presence today?" }
         ]);
     };
 
@@ -56,7 +56,7 @@ export default function ChatbotUI() {
                     setTimeout(() => {
                         setMessages(prev => [...prev, {
                             role: 'system',
-                            content: '[AGENCY PROTOCOL]: Lead credentials secured. Strategic bridge initialization confirmed.'
+                            content: 'Success: We have received your details. Someone from our team will reach out to you soon.'
                         }]);
                     }, 1000);
                 }
@@ -67,7 +67,7 @@ export default function ChatbotUI() {
             console.error('Chat error:', error);
             setMessages(prev => [...prev, {
                 role: 'assistant',
-                content: 'Connection instability detected. Please try re-initiating the protocol or contact us directly via WhatsApp.'
+                content: 'I am sorry, I am having trouble connecting right now. Please try again or message us directly on WhatsApp.'
             }]);
         } finally {
             setIsLoading(false);
@@ -105,8 +105,8 @@ export default function ChatbotUI() {
                                     <Bot size={20} />
                                 </div>
                                 <div>
-                                    <div className="text-sm font-bold text-white leading-none">XNX Intelligence Node</div>
-                                    <div className="text-[9px] font-black text-brand-primary uppercase tracking-[0.2em] mt-1">Status: Active</div>
+                                    <div className="text-sm font-bold text-white leading-none">XNX Assistant</div>
+                                    <div className="text-[9px] font-black text-brand-primary uppercase tracking-[0.2em] mt-1">Status: Online</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-1">
@@ -168,7 +168,7 @@ export default function ChatbotUI() {
                         {/* Suggested Questions */}
                         {messages.length === 1 && (
                             <div className="px-6 py-4 flex flex-col gap-2 border-t border-white/5 bg-white/2">
-                                <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.2em] mb-1 italic">Suggested Protocols:</div>
+                                <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.2em] mb-1 italic">I can help with:</div>
                                 <div className="flex flex-wrap gap-2">
                                     {[
                                         "Tell me about web services",
@@ -217,7 +217,7 @@ export default function ChatbotUI() {
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                                    placeholder="Inquire protocol..."
+                                    placeholder="How can we help?"
                                     className="w-full bg-bg-dark border border-white/10 rounded-2xl py-4 pl-6 pr-14 text-sm text-white focus:border-brand-primary/40 focus:bg-white/5 outline-none transition-all placeholder:text-white/20 font-medium"
                                 />
                                 <button

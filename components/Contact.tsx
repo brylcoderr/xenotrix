@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Mail, Send, MapPin, Phone, ShieldCheck, Activity, Globe, Lock, Clock, CheckCircle2, Calendar, Coins } from 'lucide-react';
+import { Mail, Send, MapPin, Phone, ShieldCheck, Activity, Globe, Lock, Clock, CheckCircle2 } from 'lucide-react';
 
 const Contact = () => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-bg-dark overflow-hidden font-sans">
+    <section id="contact" className="py-12 relative bg-bg-dark overflow-hidden font-sans">
       {/* Cinematic Background Engine */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
       <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
@@ -158,7 +158,7 @@ const Contact = () => {
                         exit={{ opacity: 0 }}
                         className="p-8 md:p-12 lg:p-16"
                       >
-                        <div className="mb-12 relative z-10">
+                        <div className="mb-6 relative z-10">
                           <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tighter mb-2">Inquiry Terminal_v5.0</h3>
                           <p className="text-[10px] font-black text-brand-primary uppercase tracking-[0.4em] opacity-80">Mission Critical Communication Protocol</p>
                         </div>
@@ -199,35 +199,37 @@ const Contact = () => {
 
                           <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2.5">
-                              <label className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] ml-2">Assigned Budget</label>
+                              <label className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] ml-2">Operational Phone</label>
                               <div className="relative group/input">
-                                <select
-                                  name="budget"
+                                <input
+                                  type="tel"
+                                  name="phone"
                                   required
-                                  className="w-full bg-white/5 border border-white/5 rounded-2xl py-5 px-6 text-white focus:border-brand-primary/40 focus:bg-white/10 outline-none transition-all font-bold tracking-tight text-base appearance-none cursor-pointer"
-                                >
-                                  <option value="" className="bg-bg-dark text-white/40">CALIBRATE_BUDGET</option>
-                                  <option value="under-5k" className="bg-bg-dark">Less than $5,000</option>
-                                  <option value="5k-15k" className="bg-bg-dark">$5,000 - $15,000</option>
-                                  <option value="15k-50k" className="bg-bg-dark">$15,000 - $50,000</option>
-                                  <option value="50k-plus" className="bg-bg-dark">$50,000+</option>
-                                </select>
+                                  placeholder="MOBILE_ID"
+                                  className="w-full bg-white/5 border border-white/5 rounded-2xl py-5 px-6 text-white focus:border-brand-primary/40 focus:bg-white/10 outline-none transition-all placeholder:text-white/5 font-bold tracking-tight text-base"
+                                />
                                 <div className="absolute right-6 top-1/2 -translate-y-1/2 text-white/10 group-focus-within/input:text-brand-primary/40 transition-colors pointer-events-none">
-                                  <Coins size={16} />
+                                  <Phone size={16} />
                                 </div>
                               </div>
                             </div>
                             <div className="space-y-2.5">
-                              <label className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] ml-2">Launch Protocol Date</label>
+                              <label className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em] ml-2">Business Type</label>
                               <div className="relative group/input">
-                                <input
-                                  type="date"
-                                  name="startDate"
+                                <select
+                                  name="businessType"
                                   required
-                                  className="w-full bg-white/5 border border-white/5 rounded-2xl py-5 px-6 text-white focus:border-brand-primary/40 focus:bg-white/10 outline-none transition-all font-bold tracking-tight text-base dark:scheme-dark"
-                                />
+                                  className="w-full bg-white/5 border border-white/5 rounded-2xl py-5 px-6 text-white focus:border-brand-primary/40 focus:bg-white/10 outline-none transition-all font-bold tracking-tight text-base appearance-none cursor-pointer"
+                                >
+                                  <option value="" className="bg-bg-dark text-white/40">SELECT_SECTOR</option>
+                                  <option value="ecommerce" className="bg-bg-dark">E-commerce</option>
+                                  <option value="saas" className="bg-bg-dark">SaaS / Tech</option>
+                                  <option value="agency" className="bg-bg-dark">Agency / B2B</option>
+                                  <option value="realestate" className="bg-bg-dark">Real Estate</option>
+                                  <option value="other" className="bg-bg-dark">Other</option>
+                                </select>
                                 <div className="absolute right-6 top-1/2 -translate-y-1/2 text-white/10 group-focus-within/input:text-brand-primary/40 transition-colors pointer-events-none">
-                                  <Calendar size={16} />
+                                  <Activity size={16} />
                                 </div>
                               </div>
                             </div>

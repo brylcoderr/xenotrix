@@ -12,7 +12,7 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 500], [0, 200]);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex flex-col pt-24 md:pt-32 pb-8 overflow-hidden bg-bg-dark">
+    <section ref={containerRef} className="relative min-h-[90vh] flex flex-col pt-20 md:pt-24 pb-4 overflow-hidden bg-bg-dark">
       {/* Cinematic Background Engine - Powered by LightRays */}
       <motion.div style={{ y }} className="absolute inset-0 z-0 pointer-events-none">
         <LightRays

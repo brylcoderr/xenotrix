@@ -19,11 +19,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Expertise', href: '#services' },
-    { name: 'Missions', href: '#work' },
-    { name: 'Heritage', href: '#about' },
-    { name: 'Methodology', href: '#process' },
-    { name: 'Solutions', href: '#packages' },
+    { name: 'Solutions', href: '/#solutions' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Process', href: '/#process' },
+    { name: 'Packages', href: '/#packages' },
+    { name: 'Work', href: '/#projects' },
   ];
 
   return (

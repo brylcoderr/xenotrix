@@ -7,59 +7,59 @@ import Link from 'next/link';
 const Packages = () => {
   const plans = [
     {
-      name: "Strategic Sprint",
-      tagline: "High-intensity validation",
+      name: "Starter",
+      tagline: "Essential infrastructure",
       price: "Initiation",
       icon: <Target className="text-violet-500" size={24} />,
       features: [
-        "Rapid Strategic Prototyping",
-        "Technical Architecture Audit",
-        "Market Logic Verification",
-        "High-Fidelity Interface Design",
-        "Deployment Roadmap Blueprint"
+        "Professional Website Design",
+        "Landing Page Setup",
+        "Basic SEO Configuration",
+        "WhatsApp Click-to-Chat",
+        "Lead Capture Forms"
       ],
       color: "from-violet-500/10 to-fuchsia-500/10"
     },
     {
-      name: "Elite Squad Ops",
-      tagline: "Mission-critical product teams",
-      price: "Retainer",
+      name: "Growth",
+      tagline: "High-performance scaling",
+      price: "Optimization",
       popular: true,
       icon: <Zap className="text-white" size={24} />,
       features: [
-        "Dedicated Engineering Squad",
-        "Architectural Oversight Protocol",
-        "Enterprise-Grade Resilience",
-        "Security Hardening Active",
-        "Continuous Optimization Loops"
+        "Advanced SEO & Analytics",
+        "AI Chatbot Integration",
+        "WhatsApp Automation Setup",
+        "High-Converting Landing Pages",
+        "Performance Monitoring"
       ],
       color: "from-violet-600/20 to-fuchsia-700/20"
     },
     {
-      name: "Core Transformation",
-      tagline: "Legacy modernizations & AI scaling",
+      name: "Pro",
+      tagline: "Complete dominance ecosystem",
       price: "Enterprise",
       icon: <ShieldCheck className="text-violet-500" size={24} />,
       features: [
-        "Core Ecosystem Modernization",
-        "Neural Pipeline Orchestration",
-        "SOC2 / Compliance Hardening",
-        "24/7 Production Stability",
-        "Global Scale Management"
+        "Full E-commerce Setup",
+        "Custom Booking Systems",
+        "Complex Automation Logic",
+        "Advanced Growth Loops",
+        "24/7 Security & Support"
       ],
       color: "from-violet-600/10 to-fuchsia-600/10"
     }
   ];
 
   return (
-    <section id="packages" className="py-16 md:py-24 bg-bg-dark relative overflow-hidden">
+    <section id="packages" className="py-12 bg-bg-dark relative overflow-hidden">
       {/* Decorative Structural Engine */}
       <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-brand-primary/5 rounded-full blur-[150px] -mr-96 -mt-96 opacity-30" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
       <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
 
       <div className="section-container relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-24">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <span className="tag justify-center!">Engagement Structures</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
             Engineered <br />

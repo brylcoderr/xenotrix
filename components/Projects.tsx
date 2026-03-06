@@ -160,7 +160,7 @@ const Projects = () => {
   const prev = () => setCurrentIndex((currentIndex - 1 + cases.length) % cases.length);
 
   return (
-    <section id="work" className="py-16 md:py-24 bg-bg-dark overflow-hidden relative">
+    <section id="projects" className="py-12 relative bg-bg-dark overflow-hidden font-sans border-t border-white/5">
       {/* Background structural typography */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[25vw] font-black text-white/1 select-none pointer-events-none tracking-tighter uppercase whitespace-nowrap leading-none">
         Architecting

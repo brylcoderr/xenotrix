@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Search, PenTool, Rocket, ChevronRight, Cpu, ShieldCheck, Zap } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, PenTool, Rocket, Cpu, ShieldCheck, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 const Process = () => {
@@ -11,190 +11,176 @@ const Process = () => {
     {
       id: "01",
       icon: <Search size={22} />,
-      title: "Strategic Discovery",
+      title: "Strategy & Planning",
       shortDesc: "Deep-dive audit & blueprinting.",
-      fullDesc: "Our architects perform a deep-dive audit of your business ecosystem to blueprint a path for scalable dominance. We analyze every technical friction point to ensure clinical execution.",
-      features: ["Business Logic Audit", "Market Positioning", "Technical Feasibility"],
+      fullDesc: "We perform a deep-dive audit of your business ecosystem to blueprint a path for scalable dominance. We analyze every technical friction point to ensure clinical execution.",
+      features: ["Business Logic Audit", "Market Positioning", "Growth Roadmap"],
       color: "from-violet-500/20 to-fuchsia-600/20"
     },
     {
       id: "02",
       icon: <PenTool size={22} />,
-      title: "Precision Engineering",
-      shortDesc: "High-fidelity development.",
+      title: "Design & Development",
+      shortDesc: "High-fidelity execution.",
       fullDesc: "Design meeting performance. We construct high-fidelity frameworks optimized for speed, security, and elite user experience using next-generation stack protocols.",
-      features: ["Architecture Design", "Security Hardening", "UI/UX Orchestration"],
+      features: ["Architecture Design", "Custom UI/UX", "Next.js Engineering"],
       color: "from-fuchsia-500/20 to-violet-700/20"
     },
     {
       id: "03",
+      icon: <Cpu size={22} />,
+      title: "Automation Setup",
+      shortDesc: "AI & System integration.",
+      fullDesc: "We integrate mission-critical AI chatbots and automated lead systems into your existing stack with clinical precision, ensuring 24/7 business operations.",
+      features: ["AI Chatbot Tuning", "WhatsApp Automation", "Lead Flow Setup"],
+      color: "from-violet-600/20 to-fuchsia-700/20"
+    },
+    {
+      id: "04",
       icon: <Rocket size={22} />,
-      title: "Seamless Integration",
-      shortDesc: "Zero-friction deployment.",
-      fullDesc: "Zero-friction deployment. We integrate mission-critical solutions into your existing stack with clinical precision, ensuring uninterrupted business operations.",
-      features: ["CI/CD Pipeline Setup", "Zero-Downtime Migration", "Infrastructure Tuning"],
+      title: "Launch & Optimization",
+      shortDesc: "Zero-friction scaling.",
+      fullDesc: "Clinical deployment and continuous optimization. We monitor global performance and conversion yield to ensure your digital ecosystem remains at peak dominance.",
+      features: ["CI/CD Deployment", "Conversion Audit", "Lighthouse Tuning"],
       color: "border-violet-400/20 bg-violet-400/5"
     }
   ];
 
   return (
-    <section id="process" className="py-16 md:py-24 bg-bg-dark relative overflow-hidden">
-      {/* Cinematic Background Engine */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[120px] -mr-96 -mt-96 opacity-30" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-fuchsia-500/5 rounded-full blur-[120px] -ml-64 -mb-32 opacity-20" />
+    <section id="process" className="py-12 bg-bg-dark relative overflow-hidden">
+      {/* Cinematic Grid Base */}
+      <div className="absolute inset-0 bg-grid-white/[0.02] mask-[radial-gradient(ellipse_at_center,black,transparent_80%)]" />
 
       <div className="section-container relative z-10">
-        <div className="flex flex-col items-center text-center mb-16 lg:hidden">
-          <span className="tag">Our Methodology</span>
-          <h2 className="text-4xl font-bold tracking-tighter mb-4 leading-[0.85] text-white">
-            Architectural <span className="text-brand-primary">Excellence.</span>
+        <div className="max-w-4xl mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-px bg-brand-primary/40" />
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary">How We Work</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 leading-[0.9] text-white">
+            Our Proven <br />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-white to-white/20">Success Process.</span>
           </h2>
-          <p className="text-base text-text-dim leading-snug opacity-80 max-w-sm">
-            A high-performance workflow for mission-critical digital scaling.
+          <p className="text-sm md:text-base text-text-dim leading-relaxed max-w-xl font-medium opacity-60">
+            A clear and efficient step-by-step approach to building high-quality digital products that grow your business.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 items-stretch min-h-[600px]">
+          {/* Phase Selector Sidebar */}
+          <div className="lg:col-span-4 flex flex-col gap-4">
+            {steps.map((step, i) => (
+              <button
+                key={step.id}
+                onClick={() => setActiveStep(i)}
+                className={`group relative p-6 rounded-[2rem] text-left transition-all duration-500 overflow-hidden ${activeStep === i
+                  ? 'bg-white/5 border-white/10 shadow-2xl scale-[1.02]'
+                  : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
+                  } border`}
+              >
+                {/* Active Indicator Line */}
+                <div className={`absolute left-0 top-0 bottom-0 w-1 bg-brand-primary transition-transform duration-500 ${activeStep === i ? 'scale-y-100' : 'scale-y-0'
+                  }`} />
 
-          {/* Static Header Column - Desktop Only */}
-          <div className="hidden lg:col-span-5 lg:block sticky top-32">
-            <span className="tag">Our Methodology</span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-[0.85] text-white">
-              The Lifecycle of <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary via-white to-brand-primary/40 animate-gradient">The Lifecycle of <br /> Architectural Excellence.</span>
-            </h2>
-            <p className="text-lg text-text-dim leading-tight mb-10 font-medium opacity-80 max-w-md">
-              A condensed, high-performance workflow designed for mission-critical digital scaling.
-            </p>
-
-            {/* Step Selection - Interactive Navigation */}
-            <div className="space-y-3">
-              {steps.map((step, i) => (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(i)}
-                  className={`w-full flex items-center gap-5 p-5 rounded-4xl transition-all duration-500 border group ${activeStep === i
-                    ? 'bg-white/5 border-white/10 shadow-2xl shadow-brand-primary/10'
-                    : 'bg-transparent border-transparent opacity-40 hover:opacity-100'
-                    }`}
-                >
-                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-500 ${activeStep === i
-                    ? `bg-linear-to-r ${step.color.replace('/20', '')} text-white scale-110 shadow-lg`
-                    : 'bg-white/5 text-white/40'
+                <div className="flex items-center gap-6 relative z-10">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${activeStep === i ? 'bg-brand-primary text-white scale-110' : 'bg-white/5 text-white/40'
                     }`}>
                     {step.icon}
                   </div>
-                  <div className="text-left">
-                    <div className="text-[12px] font-black uppercase tracking-[0.3em] text-brand-primary mb-0.5">Phase {step.id}</div>
-                    <div className="text-base font-bold text-white tracking-tight">{step.title}</div>
+                  <div>
+                    <div className="text-[9px] font-black uppercase tracking-[0.3em] text-brand-primary mb-1">Step 0{step.id}</div>
+                    <div className="text-lg font-bold text-white tracking-tight">{step.title}</div>
                   </div>
-                  <ChevronRight
-                    size={16}
-                    className={`ml-auto transition-transform duration-500 ${activeStep === i ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}
-                  />
-                </button>
-              ))}
-            </div>
+                </div>
+              </button>
+            ))}
           </div>
 
-          {/* Dynamic Content Display - Mobile Carousel Integrated */}
-          <div className="lg:col-span-7 w-full">
-            {/* Mobile Phase Indicators */}
-            <div className="flex lg:hidden justify-between gap-2 mb-8 bg-white/2 p-2 rounded-3xl border border-white/5">
-              {steps.map((step, i) => (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(i)}
-                  className={`flex-1 flex flex-col items-center py-3 rounded-2xl transition-all duration-500 ${activeStep === i ? 'bg-white/5 text-brand-primary' : 'text-white/20'
-                    }`}
-                >
-                  <div className="mb-1">{step.icon}</div>
-                  <div className="text-[10px] font-black uppercase tracking-widest">{step.id}</div>
-                </button>
-              ))}
-            </div>
-
-            <div className="relative min-h-[500px] p-8 lg:p-16 overflow-hidden group border border-white/5 rounded-5xl bg-white/3 backdrop-blur-3xl">
-              {/* Dynamic Animated Background */}
+          {/* Mission Control Display */}
+          <div className="lg:col-span-8 relative">
+            <div className="h-full rounded-5xl border border-white/10 bg-white/2 backdrop-blur-3xl p-10 lg:p-16 overflow-hidden relative group">
+              {/* Internal Dynamic Glow */}
               <motion.div
-                key={`bg-${activeStep}`}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
+                key={`glow-${activeStep}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className={`absolute inset-0 bg-linear-to-br ${steps[activeStep].color} opacity-[0.08]`}
+                className={`absolute inset-0 bg-linear-to-br ${steps[activeStep].color} opacity-[0.03]`}
               />
 
-              <div className="relative z-10 h-full flex flex-col">
-                <motion.div
-                  key={activeStep}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="text-6xl md:text-[100px] font-black text-white/5 leading-none tracking-tighter select-none">
-                      {steps[activeStep].id}
-                    </span>
-                    <div className="flex-1 h-px bg-white/5" />
-                    <div className="px-5 py-2 rounded-full border border-brand-primary/20 bg-brand-primary/5 text-[10px] font-black text-brand-primary uppercase tracking-widest animate-pulse">
-                      System_Phase_Live
-                    </div>
-                  </div>
-
-                  <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-6">
-                    {steps[activeStep].title}
-                  </h3>
-
-                  <p className="text-base md:text-xl text-white leading-relaxed mb-10 font-medium italic opacity-90">
-                    &quot;{steps[activeStep].fullDesc}&quot;
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-10 mt-auto">
-                    <div>
-                      <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary mb-6 flex items-center gap-2">
-                        <Cpu size={12} /> Core Protocols
-                      </div>
-                      <div className="space-y-4">
-                        {steps[activeStep].features.map((feature, i) => (
-                          <div key={i} className="flex items-center gap-3 group/item">
-                            <div className="w-1 h-1 rounded-full bg-brand-primary group-hover/item:scale-150 transition-transform" />
-                            <span className="text-[10px] font-black text-white uppercase tracking-widest group-hover/item:text-brand-primary transition-colors duration-300">
-                              {feature}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
-                      <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
-                        <ShieldCheck className="text-brand-primary mb-2 transition-transform group-hover/card:scale-110" size={18} />
-                        <div className="text-[8px] font-black text-white uppercase tracking-widest">Arch Audit</div>
-                      </div>
-                      <div className="p-5 rounded-3xl bg-white/4 border border-white/10 hover:border-brand-primary/40 transition-all group/card">
-                        <Zap className="text-fuchsia-400 mb-2 transition-transform group-hover/card:scale-110" size={18} />
-                        <div className="text-[8px] font-black text-white uppercase tracking-widest">Efficiency</div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
+              {/* Industrial Schematic Accents */}
+              <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                <div className="text-[120px] font-black leading-none text-white select-none tracking-tighter">
+                  0{steps[activeStep].id}
+                </div>
               </div>
-            </div>
 
-            {/* Mobile Navigation Arrows */}
-            <div className="flex lg:hidden justify-between mt-8">
-              <button
-                onClick={() => setActiveStep(prev => (prev - 1 + steps.length) % steps.length)}
-                className="flex items-center gap-2 text-[12px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
-              >
-                <ChevronRight className="rotate-180" size={14} /> Prev Phase
-              </button>
-              <button
-                onClick={() => setActiveStep(prev => (prev + 1) % steps.length)}
-                className="flex items-center gap-2 text-[12px] font-black text-white/40 uppercase tracking-widest hover:text-brand-primary transition-colors p-4"
-              >
-                Next Phase <ChevronRight size={14} />
-              </button>
+              <div className="relative z-10 flex flex-col h-full">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeStep}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex-1"
+                  >
+                    <div className="flex items-center gap-4 mb-10">
+                      <div className="px-4 py-1.5 rounded-full border border-brand-primary/20 bg-brand-primary/5 text-[9px] font-black text-brand-primary uppercase tracking-[0.3em]">
+                        Current Focus
+                      </div>
+                      <div className="flex-1 h-px bg-white/5" />
+                    </div>
+
+                    <h3 className="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-8">
+                      {steps[activeStep].title}
+                    </h3>
+
+                    <p className="text-lg md:text-2xl text-text-dim leading-relaxed mb-12 font-medium italic opacity-80">
+                      &quot;{steps[activeStep].fullDesc}&quot;
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-12 mt-auto">
+                      <div>
+                        <div className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-primary mb-8 flex items-center gap-3">
+                          <Cpu size={14} /> Key Deliverables
+                        </div>
+                        <div className="space-y-4">
+                          {steps[activeStep].features.map((feature, i) => (
+                            <div key={i} className="flex items-center gap-4 group/item">
+                              <div className="w-1.5 h-1.5 rounded-full bg-brand-primary/40 group-hover/item:bg-brand-primary group-hover/item:scale-150 transition-all" />
+                              <span className="text-[11px] font-black text-white/50 uppercase tracking-widest group-hover/item:text-white transition-colors">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-4">
+                        <div className="p-6 rounded-3xl bg-white/3 border border-white/5 hover:border-brand-primary/40 transition-all flex items-center gap-4 group/card">
+                          <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary transition-transform group-hover/card:scale-110">
+                            <ShieldCheck size={20} />
+                          </div>
+                          <div>
+                            <div className="text-[10px] font-black text-white uppercase tracking-widest mb-0.5">Quality Assurance</div>
+                            <div className="text-[9px] text-white/30 font-bold uppercase tracking-widest">Always Verified</div>
+                          </div>
+                        </div>
+                        <div className="p-6 rounded-3xl bg-white/3 border border-white/5 hover:border-brand-primary/40 transition-all flex items-center gap-4 group/card">
+                          <div className="w-10 h-10 rounded-xl bg-fuchsia-500/10 flex items-center justify-center text-fuchsia-500 transition-transform group-hover/card:scale-110">
+                            <Zap size={20} />
+                          </div>
+                          <div>
+                            <div className="text-[10px] font-black text-white uppercase tracking-widest mb-0.5">Fast Delivery</div>
+                            <div className="text-[9px] text-white/30 font-bold uppercase tracking-widest">optimized Speed</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
           </div>
         </div>

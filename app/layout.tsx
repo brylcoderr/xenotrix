@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ChatbotUI from '@/components/ChatbotUI';
+import FloatingActions from '@/components/FloatingActions';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://xenotrix.com'),
@@ -40,6 +41,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ChatbotUI />
+        <FloatingActions />
       </body>
     </html>
   );

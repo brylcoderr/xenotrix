@@ -69,25 +69,25 @@ const Testimonials = () => {
   }, [isAutoPlaying, next]);
 
   return (
-    <section className="py-16 md:py-32 relative bg-bg-dark overflow-hidden">
+    <section className="py-12 relative bg-bg-dark overflow-hidden">
       <div className="section-container">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div className="max-w-2xl text-center md:text-left">
             <span className="tag mb-4">Client Reviews</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-[0.85] text-white">
               Voices of <span className="text-brand-primary">Success.</span>
             </h2>
           </div>
-          
+
           <div className="flex gap-4 justify-center md:justify-end">
-            <button 
+            <button
               onClick={prev}
               className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 hover:border-brand-primary/50 transition-all active:scale-90"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={24} />
             </button>
-            <button 
+            <button
               onClick={next}
               className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 hover:border-brand-primary/50 transition-all active:scale-90"
               aria-label="Next testimonial"
@@ -97,7 +97,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div 
+        <div
           className="relative px-4 md:px-0"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
@@ -117,7 +117,7 @@ const Testimonials = () => {
                   const testimonial = testimonials[index];
                   // Hide extra cards on smaller screens
                   const visibilityClass = offset === 1 ? 'hidden md:block' : offset === 2 ? 'hidden lg:block' : 'block';
-                  
+
                   return (
                     <div
                       key={`${index}-${offset}`}
@@ -126,11 +126,11 @@ const Testimonials = () => {
                       <div className="absolute top-10 right-10 text-white/5 transition-transform duration-700 group-hover:scale-110 group-hover:text-brand-primary/10">
                         <Quote size={80} />
                       </div>
-                      
+
                       <div className="flex mb-6 gap-0.5">
-                         {[...Array(5)].map((_, j) => (
-                           <Star key={j} size={12} className="text-brand-primary fill-brand-primary opacity-60 group-hover:opacity-100 transition-opacity" />
-                         ))}
+                        {[...Array(5)].map((_, j) => (
+                          <Star key={j} size={12} className="text-brand-primary fill-brand-primary opacity-60 group-hover:opacity-100 transition-opacity" />
+                        ))}
                       </div>
 
                       <p className="text-lg text-white font-medium italic relative z-10 mb-10 leading-relaxed opacity-90">
@@ -139,9 +139,9 @@ const Testimonials = () => {
 
                       <div className="flex items-center gap-4 border-t border-white/5 pt-8">
                         <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 group-hover:border-brand-primary/40 transition-colors">
-                          <Image 
-                            src={testimonial.image} 
-                            alt={testimonial.author} 
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.author}
                             fill
                             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                           />
@@ -163,9 +163,8 @@ const Testimonials = () => {
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-500 ${
-                  currentIndex === i ? 'w-8 bg-brand-primary' : 'bg-white/10 hover:bg-white/30'
-                }`}
+                className={`w-2 h-2 rounded-full transition-all duration-500 ${currentIndex === i ? 'w-8 bg-brand-primary' : 'bg-white/10 hover:bg-white/30'
+                  }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />
             ))}

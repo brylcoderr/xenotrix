@@ -3,11 +3,11 @@ import { Shield, Zap, TrendingUp, BarChart } from 'lucide-react';
 
 const Comparison = () => {
    return (
-      <section className="py-16 md:py-32 relative overflow-hidden bg-bg-dark">
+      <section className="py-12 relative overflow-hidden bg-bg-dark">
 
 
          <div className="section-container relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="text-center max-w-3xl mx-auto mb-10">
                <span className="tag">Strategic Edge</span>
                <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-white leading-[0.85]">
                   The <span className="text-brand-primary">Advantage</span> of <br />
@@ -65,7 +65,7 @@ const Comparison = () => {
             </div>
 
             {/* Benefits Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-20 border-t border-white/10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10 pt-10 border-t border-white/10">
                {[
                   { icon: <Zap size={20} />, label: "Performance", val: "400% Faster" },
                   { icon: <Shield size={20} />, label: "Security", val: "Zero Critical" },
